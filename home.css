@@ -1,0 +1,14 @@
+body{
+    background-image: url(images/pexels-cottonbro-9669089.jpg);
+    background-repeat: no-repeat;
+    background-size: 1400px;
+    font-family: Arial, sans-serif;
+    overflow: hidden;
+   
+}
+
+.containt{
+    font: 1.5em Georgia,serif;
+    height: 100vh;
+    color: white ;
+}
