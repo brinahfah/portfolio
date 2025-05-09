@@ -120,8 +120,6 @@ button:hover{
     position: relative;
     top: 100px;
     left: 0px;
-    font: 1em Georgia,serif;
-    font-size: 23px;
     display: flex;
     flex: 1;
     flex-direction: column;
@@ -130,6 +128,63 @@ button:hover{
    
 }
 
+.Animation_pictures{
+    color: white;
+    font: 5px ;
+    position: relative;
+    top: 0px;
+    left: 0px;
+    display: flex;
+    opacity: 1; /* Initialement invisible */
+    transition: opacity 2s ease-in-out; /* Transition douce de l'opacité */
+    animation: fadeInOut 3s infinite; /* Animation infinie */
+    margin: 0px;
+ 
+}
+
+
+.image1 {
+   font: 3px;
+   position: relative;
+   top: 700px;
+   left: 20px; 
+}
+
+
+.image2 {
+   font: 3px;
+   position: relative;
+   top: 450px;
+   left: 250px;
+}
+
+.image3 {
+   font: 3px;
+   position: relative;
+   top: 700px;
+   left: 85px; 
+}
+
+.image4 {
+   font: 3px;
+   position: relative;
+   top: 400px;
+   right: 600px;; 
+}
+
+.image5 {
+   font: 3px;
+   position: relative;
+   top: 700px;
+   right: 20px;;
+}
+
+.image6 {
+   font: 3px;
+   position: relative;
+   top: 450px;
+   right: 200px;;
+}
 
 
   

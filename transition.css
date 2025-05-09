@@ -1,0 +1,8 @@
+body {
+    opacity: 1; /* La page est initialement visible */
+    transition: opacity 0.3s ease-in-out; /* Animation de l'opacité */
+}
+
+body.fade-out {
+    opacity: 0; /* La page devient invisible pendant la transition */
+}

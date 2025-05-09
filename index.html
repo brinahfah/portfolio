@@ -5,34 +5,57 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfolio</title>
     <link rel="stylesheet" href="design.css">
+    <link rel="stylesheet" href="transition.css">
    
 </head>
 <body>
-   
     <div class="scrollable-container">
-        <h1> Web & Designer</h1>
+        <h1>Web & Designer</h1>
         <div class="TopLeft_part">
             <h4><a href="home.html">home</a></h4>
             <h4><a href="about.html">about</a></h4>
             <h4><a href="carrer.html">carrer</a></h4>
-     
+        </div>
         <div class="BottomCenter_part">
             <button type="submit"> <a href="https://github.com/brinahfah">github</a></button>
             <button type="submit"><a href="https://www.linkedin.com/feed/">linkedin</a></button>
             <button type="submit"><a href="https://x.com/ebikie4">twitter</a></button>
         </div>
+        <div class="container">
+            <h1> Bienvenue sur ma page!</h1>
+        </div>
+        <div class="Animation_pictures">
+            <span><div class="image1"><img src="icon_language/css.png" alt="css"></div></span>
+            <span><div class="image2"><img src="icon_language/github.png" alt="github"></div></span>
+            <span><div class="image3"><img src="icon_language/html.png" alt="html"></div></span>
+            <span><div class="image4"><img src="icon_language/javascript.png" alt="javascript"></div></span>
+            <span><div class="image5"><img src="icon_language/php.png" alt="php"></div></span>
+            <span> <div class="image6"><img src="icon_language/python.png" alt="python"></div></span>
+        </div>
     </div>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const links = document.querySelectorAll('a');
+            const container = document.querySelector('.container');
+            const animationPictures = document.querySelectorAll('.Animation_pictures span');
 
+            links.forEach(link => {
+                link.addEventListener('click', function(event) {
+                    event.preventDefault();
 
+                    container.classList.add('fade-out'); // Applique la transition 3D
+                    animationPictures.forEach(picture => {
+                      picture.classList.add('fade-out');
+                    });
 
-     <div class="container">
-        <h1> Bienvenue sur ma page!</h1>
-        
-    </div>
+                    const href = this.getAttribute('href');
 
-    <div class="presentation">
-       <input>
-
-    </div>
+                    setTimeout(function() {
+                        window.location.href = href;
+                    }, 500);
+                });
+            });
+        });
+    </script>
 </body>
 </html>

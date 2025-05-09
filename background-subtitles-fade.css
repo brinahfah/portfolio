@@ -1,0 +1,31 @@
+.Animation_pictures {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 2em;
+    color: rgba(0, 0, 0, 0.1);
+    z-index: -1;
+    white-space: nowrap;
+}
+
+.Animation_pictures span {
+    display: inline-block;
+    opacity: 0;
+    animation: fadeInOut 3s infinite; /* Durée de l'apparition/disparition */
+}
+
+/* Décalage de l'animation pour chaque mot */
+.Animation_pictures span:nth-child(1) {
+    animation-delay: 0s;
+}
+.Animation_pictures span:nth-child(2) {
+    animation-delay: 0.5s;
+}
+/* ... et ainsi de suite pour chaque mot, en incrémentant le délai */
+
+@keyframes fadeInOut {
+    0% { opacity: 0; }
+    50% { opacity: 1; }
+    100% { opacity: 0; }
+}

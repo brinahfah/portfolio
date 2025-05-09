@@ -21,7 +21,14 @@
             </p>
         </div>
     
-     
+    <script>
+    document.addEventListener('DOMContentLoaded', function() {
+        document.body.style.opacity = 0; // Initialement invisible
+        setTimeout(function() {
+            document.body.style.opacity = 1; // Apparaît après un court délai (doit correspondre à la durée de la transition CSS)
+        }, 10); // Un petit délai pour s'assurer que le style initial est appliqué
+    });
+</script>
    
 
 </body>
