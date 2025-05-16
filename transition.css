@@ -1,8 +1,12 @@
 body {
-    opacity: 1; /* La page est initialement visible */
-    transition: opacity 0.3s ease-in-out; /* Animation de l'opacité */
+  perspective: 1000px; /* Ajout de la perspective pour la transition 3D */
+  overflow-x: hidden; /* Empêche le défilement horizontal */
+  transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out; /* Transition pour le body */
+  transform-origin: center;
+  opacity: 1;
 }
 
 body.fade-out {
-    opacity: 0; /* La page devient invisible pendant la transition */
+  opacity: 0;
+  transform: rotateY(90deg) scale(0.8); /* Exemple de transition 3D */
 }
