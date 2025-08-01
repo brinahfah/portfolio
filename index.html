@@ -8,7 +8,7 @@
   <link rel="stylesheet" href="css/transition.css" />
 </head>
 <body>
-  <header>
+  <header class="reveal">
     <nav class="TopLeft_part">
       <a href="index.html">acceuil</a>
       <a href="home.html">home</a>
@@ -19,7 +19,7 @@
   </header>
 
   
-  <main>
+  <main class="reveal">
     <h1>Web & Designer</h1>
    
 
@@ -29,7 +29,7 @@
       <a href="https://x.com/ebikie4" target="_blank"><button>Twitter</button></a>
     </div>
 
-     <div class="intro container">
+     <div class="intro_container">
       <h2>Bienvenue sur ma page !</h2>
     </div>
 
@@ -44,7 +44,10 @@
   </main>
 
   <footer>
-    <p>&copy; 2025 Brinah Fah • Tous droits réservés</p>
+    <p>&copy; 2025 ELY&BRI • Tous droits réservés</p>
+    <div class="logo">
+        <img src="images/ely_bri.png" alt="elysee" >
+    </div>
   </footer>
 
   <script>
@@ -69,9 +72,26 @@
         });
       });
     });
-
-   
-
   </script>
+
+  <script>
+  const reveals = document.querySelectorAll('.reveal');
+
+  function handleReveal() {
+    for (const element of reveals) {
+      const windowHeight = window.innerHeight;
+      const elementTop = element.getBoundingClientRect().top;
+      const revealPoint = 100;
+
+      if (elementTop < windowHeight - revealPoint) {
+        element.classList.add('active');
+      }
+    }
+  }
+
+  window.addEventListener('scroll', handleReveal);
+  window.addEventListener('load', handleReveal); // Au chargement initial
+</script>
+
 </body>
 </html>

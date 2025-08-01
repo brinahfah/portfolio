@@ -1,8 +1,8 @@
 body {
+  width: 100%;
   margin: 0;
   padding: 0;
-  background-image: url(../images/pexels-cottonbro-9669089.jpg);
-  font-size: 1100px;
+  background-image:url(../images/fly.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   color: white;
@@ -12,7 +12,7 @@ body {
 
 header, main, footer {
   width: 100%;
-  padding: 20px;
+  padding: 50px;
 }
 
 /* ========== Typography ========== */
@@ -20,7 +20,6 @@ h1 {
   text-align: center;
   font-size: 7rem;
   text-shadow: 1px 1px 2px black, 0 0 1em black, 0 0 0.2em black;
-  margin-top: 100px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -33,14 +32,21 @@ h2 {
   justify-content: center;
   align-items: center;
   position: relative;
-  top: 95px;
-  left: 0px;;
+  margin: 0;
   
+  
+}
+
+.intro_container{
+ position: relative;
+ top: 100px;
+ left: 0px;
+ 
 }
 
 /* ========== Navigation ========== */
 .TopLeft_part {
-  width: 96%;
+  width: 98%;
   background-color: rgb(231, 74, 231);
   display: flex;
   justify-content: space-between;
@@ -104,13 +110,9 @@ h2 {
 /* ========== Animation Section ========== */
 .Animation_pictures {
   display: flex;
-  justify-content: center;
-  gap: 15px;
-  margin-top: 100px;
   position: relative;
-  top: 100px;
-  left: 0;
-  
+  top: 250px;
+ 
 }
 
 .Animation_pictures span {
@@ -134,10 +136,29 @@ h2 {
 /* ========== Footer ========== */
 footer {
   text-align: center;
-  padding: 20px;
   background-color: rgba(0, 0, 0, 0.5);
   font-size: 0.9rem;
   position: relative;
-  top: 82px;
+  padding-top:5px ;
+  padding-bottom: 15px;
+  top: 250px;
+  display: flex;
+}
+
+.logo img{
+  width: 50px;
+ 
+}
+
+/* Animation d'apparition avec transition */
+.reveal {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 0.6s ease-out;
+}
+
+.reveal.active {
+  opacity: 1;
+  transform: translateY(0);
 }
 
