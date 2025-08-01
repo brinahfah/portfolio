@@ -1,61 +1,77 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio</title>
-    <link rel="stylesheet" href="design.css">
-    <link rel="stylesheet" href="transition.css">
-   
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Portfolio</title>
+  <link rel="stylesheet" href="css/design.css" />
+  <link rel="stylesheet" href="css/transition.css" />
 </head>
 <body>
-    <div class="scrollable-containt">
-        <h1>Web & Designer</h1>
-        <div class="TopLeft_part">
-            <h4><a href="home.html">home</a></h4>
-            <h4><a href="about.html">about</a></h4>
-            <h4><a href="carrer.html">carrer</a></h4>
-        </div>
-        <div class="BottomCenter_part">
-            <button type="submit"> <a href="https://github.com/brinahfah" target="blank">github</a></button>
-            <button type="submit"><a href="https://www.linkedin.com/feed/" target="blank">linkedin</a></button>
-            <button type="submit"><a href="https://x.com/ebikie4" target="blank">twitter</a></button>
-        </div>
-        <div class="container">
-            <h1> Bienvenue sur ma page!</h1>
-        </div>
-        <div class="Animation_pictures">
-            <span><div class="image1"><img src="icon_language/css.png" alt="css"></div></span>
-            <span><div class="image2"><img src="icon_language/github.png" alt="github"></div></span>
-            <span><div class="image3"><img src="icon_language/html.png" alt="html"></div></span>
-            <span><div class="image4"><img src="icon_language/javascript.png" alt="javascript"></div></span>
-            <span><div class="image5"><img src="icon_language/php.png" alt="php"></div></span>
-            <span> <div class="image6"><img src="icon_language/python.png" alt="python"></div></span>
-        </div>
+  <header>
+    <nav class="TopLeft_part">
+      <a href="index.html">acceuil</a>
+      <a href="home.html">home</a>
+      <a href="about.html">about</a>
+      <a href="carrer.html">carrer</a>
+    </nav>
+
+  </header>
+
+  
+  <main>
+    <h1>Web & Designer</h1>
+   
+
+    <div class="BottomCenter_part">
+      <a href="https://github.com/brinahfah" target="_blank"><button>GitHub</button></a>
+      <a href="https://www.linkedin.com/feed/" target="_blank"><button>LinkedIn</button></a>
+      <a href="https://x.com/ebikie4" target="_blank"><button>Twitter</button></a>
     </div>
-    <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            const links = document.querySelectorAll('a');
-            const container = document.querySelector('.container');
-            const animationPictures = document.querySelectorAll('.Animation_pictures span');
 
-            links.forEach(link => {
-                link.addEventListener('click', function(event) {
-                    event.preventDefault();
+     <div class="intro container">
+      <h2>Bienvenue sur ma page !</h2>
+    </div>
 
-                    container.classList.add('fade-out'); // Applique la transition 3D
-                    animationPictures.forEach(picture => {
-                      picture.classList.add('fade-out');
-                    });
+    <div class="Animation_pictures">
+      <span><div class="image"><img src="icon_language/css.png" alt="css" width="55%" /></div></span>
+      <span><div class="image"><img src="icon_language/github.png" alt="github" /></div></span>
+      <span><div class="image"><img src="icon_language/html.png" alt="html" width="55%" /></div></span>
+      <span><div class="image"><img src="icon_language/javascript.png" alt="javascript" width="55%" /></div></span>
+      <span><div class="image"><img src="icon_language/php.png" alt="php" width="55%" /></div></span>
+      <span><div class="image"><img src="icon_language/python.png" alt="python" /></div></span>
+    </div>
+  </main>
 
-                    const href = this.getAttribute('href');
+  <footer>
+    <p>&copy; 2025 Brinah Fah • Tous droits réservés</p>
+  </footer>
 
-                    setTimeout(function() {
-                        window.location.href = href;
-                    }, 500);
-                });
-            });
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      const links = document.querySelectorAll('a');
+      const container = document.querySelector('.container');
+      const pictures = document.querySelectorAll('.Animation_pictures span');
+
+      links.forEach(link => {
+        link.addEventListener('click', function (event) {
+          if (this.getAttribute('href').includes('http')) return;
+
+          event.preventDefault();
+          document.body.classList.add('fade-out');
+          container.classList.add('fade-out');
+          pictures.forEach(pic => pic.classList.add('fade-out'));
+
+          const href = this.getAttribute('href');
+          setTimeout(() => {
+            window.location.href = href;
+          }, 700);
         });
-    </script>
+      });
+    });
+
+   
+
+  </script>
 </body>
 </html>
