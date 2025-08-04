@@ -3,13 +3,54 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="home.css">
-    <link rel="stylesheet" href="transition.css">
+    <link rel="stylesheet" href="css/home.css">
+    <link rel="stylesheet" href="css/transition.css">
     <title>home</title>
 </head>
 <body>
 
-        <div class="presentation">
+    <div class="containt">
+       
+
+        <div class="star-container" id="starContainer">
+            <!-- 10 feuilles -->
+            <img src="images/stars.png" alt="étoile" class="beautifullstars">
+            <img src="images/stars.png" alt="étoile" class="beautifullstars">
+            <img src="images/stars.png" alt="étoile" class="beautifullstars">
+            <img src="images/stars.png" alt="étoile" class="beautifullstars">
+            <img src="images/stars.png" alt="étoile" class="beautifullstars">
+            <img src="images/stars.png" alt="étoile" class="beautifullstars">
+            <img src="images/stars.png" alt="étoile" class="beautifullstars">
+            <img src="images/stars.png" alt="étoile" class="beautifullstars">
+            <img src="images/stars.png" alt="étoile" class="beautifullstars">
+            <img src="images/stars.png" alt="étoile" class="beautifullstars">
+            <img src="images/stars.png" alt="étoile" class="beautifullstars">
+            <img src="images/stars.png" alt="étoile" class="beautifullstars">
+            <img src="images/stars.png" alt="étoile" class="beautifullstars">
+            <img src="images/stars.png" alt="étoile" class="beautifullstars">
+            <img src="images/stars.png" alt="étoile" class="beautifullstars">
+            <img src="images/stars.png" alt="étoile" class="beautifullstars">
+            <img src="images/stars.png" alt="étoile" class="beautifullstars">
+            <img src="images/stars.png" alt="étoile" class="beautifullstars">
+            <img src="images/stars.png" alt="étoile" class="beautifullstars">
+            <img src="images/stars.png" alt="étoile" class="beautifullstars">
+            <img src="images/stars.png" alt="étoile" class="beautifullstars">
+            <img src="images/stars.png" alt="étoile" class="beautifullstars">
+            <img src="images/stars.png" alt="étoile" class="beautifullstars">
+            <img src="images/stars.png" alt="étoile" class="beautifullstars">
+            <img src="images/stars.png" alt="étoile" class="beautifullstars">
+            <img src="images/stars.png" alt="étoile" class="beautifullstars">
+            <img src="images/stars.png" alt="étoile" class="beautifullstars">
+            <img src="images/stars.png" alt="étoile" class="beautifullstars">
+            <img src="images/stars.png" alt="étoile" class="beautifullstars">
+            <img src="images/stars.png" alt="étoile" class="beautifullstars">
+            <img src="images/stars.png" alt="étoile" class="beautifullstars">
+            <img src="images/stars.png" alt="étoile" class="beautifullstars">
+            <img src="images/stars.png" alt="étoile" class="beautifullstars">
+            <img src="images/stars.png" alt="étoile" class="beautifullstars">
+        
+        
+        </div>
             <p>
                 Je vous présente mon portfolio, un espace où je partage mes projets et mes compétences.
                 Vous y trouverez des exemples de mon travail, ainsi que des informations sur mes expériences professionnelles et mes formations.
@@ -19,17 +60,25 @@
                 Merci de votre visite et j'espère que vous apprécierez votre exploration de mon portfolio !
                 <br><br>
             </p>
+
+        <div class="image">
+                
+            <img src="images/welcome.png" alt="Mon Image" >
+            <button onclick="window.location.href='index.html'">Retour</button>
+        
         </div>
-    
+    </div>
+
     <script>
-    document.addEventListener('DOMContentLoaded', function() {
-        document.body.style.opacity = 0; // Initialement invisible
-        setTimeout(function() {
-            document.body.style.opacity = 1; // Apparaît après un court délai (doit correspondre à la durée de la transition CSS)
-        }, 10); // Un petit délai pour s'assurer que le style initial est appliqué
-    });
-</script>
+        document.addEventListener('DOMContentLoaded', function() {
+            document.body.style.opacity = 0; // Initialement invisible
+            setTimeout(function() {
+                document.body.style.opacity = 1; // Apparaît après un court délai (doit correspondre à la durée de la transition CSS)
+            }, 10); // Un petit délai pour s'assurer que le style initial est appliqué
+        });
+    </script>
    
+       <script src="stars.js"></script>
 
 </body>
 </html>

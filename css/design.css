@@ -171,3 +171,117 @@ footer {
   transform: translateY(0);
 }
 
+/* === Responsive Design === */
+@media (max-width: 1200px) {
+  h1 {
+    font-size: 5rem;
+  }
+
+  h2 {
+    font-size: 3.5rem;
+  }
+
+  .TopLeft_part {
+    width: 100%;
+    padding: 10px 20px;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .BottomCenter_part {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .BottomCenter_part button {
+    width: 90%;
+    font-size: 1.5rem;
+  }
+
+  .Animation_pictures {
+    top: 180px;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  footer {
+    flex-direction: column;
+    align-items: center;
+    font-size: 0.85rem;
+  }
+}
+
+@media (max-width: 768px) {
+  h1 {
+    font-size: 3.5rem;
+    text-align: center;
+  }
+
+  h2 {
+    font-size: 2.5rem;
+    text-align: center;
+  }
+
+  header, main, footer {
+    padding: 30px 15px;
+  }
+
+  .TopLeft_part {
+    flex-direction: column;
+    padding: 15px;
+  }
+
+  .TopLeft_part a {
+    font-size: 1rem;
+    padding: 6px 12px;
+  }
+
+  .BottomCenter_part button {
+    padding: 12px 24px;
+    font-size: 1.2rem;
+  }
+
+  .Animation_pictures {
+    top: 150px;
+    gap: 10px;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  footer {
+    font-size: 0.8rem;
+    padding: 10px;
+    text-align: center;
+  }
+}
+
+@media (max-width: 480px) {
+  h1 {
+    font-size: 2.5rem;
+  }
+
+  h2 {
+    font-size: 1.8rem;
+  }
+
+  .BottomCenter_part button {
+    font-size: 1rem;
+    padding: 10px 20px;
+  }
+
+  .TopLeft_part {
+    padding: 10px;
+  }
+
+  .TopLeft_part a {
+    font-size: 0.9rem;
+  }
+
+  .Animation_pictures {
+    top: 120px;
+  }
+
+  footer {
+    font-size: 0.7rem;
+  }
+}
