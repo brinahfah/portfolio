@@ -179,12 +179,16 @@ footer {
 
   h2 {
     font-size: 3.5rem;
+    position: relative;
+    bottom: 85px;
+    left: 0px;;
   }
 
   .TopLeft_part {
-    width: 100%;
+    width: 95%;
     padding: 10px 20px;
-    flex-direction: column;
+    display: flex;
+    flex: 1;
     gap: 10px;
   }
 
@@ -199,15 +203,21 @@ footer {
   }
 
   .Animation_pictures {
-    top: 180px;
+    top: 280px;
     flex-wrap: wrap;
     justify-content: center;
+    
   }
 
   footer {
     flex-direction: column;
     align-items: center;
     font-size: 0.85rem;
+    position: relative;
+    top: 75px;
+    left: 0px;
+    height: 20%;
+    padding: 0;
   }
 }
 
@@ -227,7 +237,8 @@ footer {
   }
 
   .TopLeft_part {
-    flex-direction: column;
+    display: flex;
+    flex: 1;
     padding: 15px;
   }
 
@@ -242,16 +253,19 @@ footer {
   }
 
   .Animation_pictures {
-    top: 150px;
+    top: 250px;
     gap: 10px;
     flex-direction: column;
     align-items: center;
+    padding: 0;
   }
 
   footer {
     font-size: 0.8rem;
-    padding: 10px;
+    padding: 0;
     text-align: center;
+    height: 15%;
+    
   }
 }
 
@@ -270,7 +284,9 @@ footer {
   }
 
   .TopLeft_part {
-    padding: 10px;
+    display: flex;
+    flex: 1;
+    padding: 15px;
   }
 
   .TopLeft_part a {
@@ -283,5 +299,8 @@ footer {
 
   footer {
     font-size: 0.7rem;
+    height: 5%;
+   
+   
   }
 }
