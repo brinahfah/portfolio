@@ -7,7 +7,6 @@ body {
   background-size: cover;
   color: white;
   font-family: 'Georgia', serif;
-  overflow-x: hidden;
 }
 
 header, main, footer {
@@ -46,7 +45,8 @@ h2 {
 
 /* ========== Navigation ========== */
 .TopLeft_part {
-  width: 98%;
+  width: 88%;
+  height: 18%;
   background-color: rgb(231, 74, 231);
   display: flex;
   justify-content: space-between;
@@ -66,6 +66,7 @@ h2 {
   padding: 8px 16px;
   transition: color 0.3s, background-color 0.3s;
 }
+
 
 .TopLeft_part a:hover {
   color: black;
@@ -112,6 +113,14 @@ h2 {
   display: flex;
   position: relative;
   top: 250px;
+  gap: 20px
+ 
+}
+
+.Animation_pictures span:nth-child(2) {
+  position: relative;
+  top: 0px;
+  right: 50px;
  
 }
 
