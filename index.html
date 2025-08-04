@@ -13,7 +13,7 @@
       <a href="index.html">acceuil</a>
       <a href="home.html">home</a>
       <a href="about.html">about</a>
-      <a href="carrer.html">carrer</a>
+      <a href="carrer.html">carriere</a>
     </nav>
 
   </header>
@@ -22,14 +22,13 @@
   <main class="reveal">
     <h1>Web & Designer</h1>
    
-
     <div class="BottomCenter_part">
       <a href="https://github.com/brinahfah" target="_blank"><button>GitHub</button></a>
       <a href="https://www.linkedin.com/feed/" target="_blank"><button>LinkedIn</button></a>
       <a href="https://x.com/ebikie4" target="_blank"><button>Twitter</button></a>
     </div>
 
-     <div class="intro_container">
+    <div class="intro_container">
       <h2>Bienvenue sur ma page !</h2>
     </div>
 
@@ -74,24 +73,24 @@
     });
   </script>
 
-  <script>
-  const reveals = document.querySelectorAll('.reveal');
+    <script>
+      const reveals = document.querySelectorAll('.reveal');
 
-  function handleReveal() {
-    for (const element of reveals) {
-      const windowHeight = window.innerHeight;
-      const elementTop = element.getBoundingClientRect().top;
-      const revealPoint = 100;
+      function handleReveal() {
+        for (const element of reveals) {
+          const windowHeight = window.innerHeight;
+          const elementTop = element.getBoundingClientRect().top;
+          const revealPoint = 100;
 
-      if (elementTop < windowHeight - revealPoint) {
-        element.classList.add('active');
+          if (elementTop < windowHeight - revealPoint) {
+            element.classList.add('active');
+          }
+        }
       }
-    }
-  }
 
-  window.addEventListener('scroll', handleReveal);
-  window.addEventListener('load', handleReveal); // Au chargement initial
-</script>
+      window.addEventListener('scroll', handleReveal);
+      window.addEventListener('load', handleReveal); // Au chargement initial
+    </script>
 
 </body>
 </html>
