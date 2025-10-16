@@ -1,13 +1,103 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mon parcours</title>
-     <link rel="stylesheet" href="css/projet.css">
-   
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mes Projets</title>
+  <link rel="stylesheet" href="css/projet.css">
 </head>
 <body>
-     <iframe src="https://brinahfah.github.io/pok-mon/" title="Démo Pokémon"></iframe>
+  <section class="projets">
+     <h1>Mes Projets</h1>
+
+     <div class="slider">
+          <div class="slides">
+
+          <!-- Projet 1 -->
+          <div class="slide active">
+               <video src="videos/projet1.mp4" autoplay muted loop></video>
+               <div class="caption">
+               <h2>My diary</h2>
+               <p>
+                    Un journal numérique qui permet de s'exprimer, dire ses pensées,
+                    parler de sa journée, écrir de textes de chansons.
+               </p>
+               </div>
+          </div>
+
+          <!-- Projet 2 -->
+          <div class="slide">
+               <video src="videos/projet2.mp4" autoplay muted loop></video>
+               <div class="caption">
+               <h2>Portfolio 3D</h2>
+               <p>Une expérience de navigation, présentation de mes différentes réalisation.</p>
+               </div>
+          </div>
+
+          <!-- Projet 3 -->
+          <div class="slide">
+               <iframe src="https://brinahfah.github.io/pok-mon/" title="Démo Pokémon"></iframe>
+               <div class="caption">
+               <h2>Jeux Pokémon</h2>
+               <p>Petit jeux de combat, avec un gagnant et un score.</p>
+               </div>
+          </div>
+
+          </div>
+
+          <!-- Boutons -->
+          <button class="prev">&#10094;</button>
+          <button class="next">&#10095;</button>
+
+          <!-- Indicateurs -->
+          <div class="dots"></div>
+       </div>
+  </section>
+
+               <script>
+
+                    const slides = document.querySelectorAll(".slide");
+                    const nextBtn = document.querySelector(".next");
+                    const prevBtn = document.querySelector(".prev");
+                    const dotsContainer = document.querySelector(".dots");
+
+                    let currentIndex = 0;
+
+                    // Création des points
+                    slides.forEach((_, index) => {
+                    const dot = document.createElement("span");
+                    dot.addEventListener("click", () => showSlide(index));
+                    dotsContainer.appendChild(dot);
+                    });
+                    const dots = document.querySelectorAll(".dots span");
+
+                    function showSlide(index) {
+                    slides.forEach(slide => slide.classList.remove("active"));
+                    dots.forEach(dot => dot.classList.remove("active"));
+                    slides[index].classList.add("active");
+                    dots[index].classList.add("active");
+                    currentIndex = index;
+                    }
+
+                    function nextSlide() {
+                    currentIndex = (currentIndex + 1) % slides.length;
+                    showSlide(currentIndex);
+                    }
+
+                    function prevSlide() {
+                    currentIndex = (currentIndex - 1 + slides.length) % slides.length;
+                    showSlide(currentIndex);
+                    }
+
+                    nextBtn.addEventListener("click", nextSlide);
+                    prevBtn.addEventListener("click", prevSlide);
+
+                    // Diaporama automatique
+                    setInterval(nextSlide, 6000);
+
+                    // Initialisation
+                    showSlide(currentIndex);
+
+               </script>
 </body>
 </html>
