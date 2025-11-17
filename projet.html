@@ -19,7 +19,7 @@
                <div class="caption">
                <h2>anonym_comment</h2>
                <p>
-                    Une plateforme créer pour permettre aux élèves de contribuer 
+                    Une plateforme créée pour permettre aux élèves de contribuer 
                     à l'avancement de l'école.
                </p>
                </div>
@@ -31,8 +31,8 @@
                <div class="caption">
                     <h2>Projet fil rouge</h2>
                     <p>
-                         Une application web, gestion des emprunts, générer des rapports
-                         et gérer le catalogue 
+                         Une application web : gestion des emprunts, génération de rapports
+                         et gestion du catalogue.
                     </p>
                </div>
           </div>
@@ -94,25 +94,38 @@
 
 
 
-    /* ⬇️⬇️⬇️ SCRIPT FULLSCREEN POUR LES VIDEOS ⬇️⬇️⬇️ */
-
+    /* ============================================================
+       FULLSCREEN COMPATIBLE PC + ANDROID + iPHONE / iPAD
+       ============================================================ */
+    
     document.addEventListener("DOMContentLoaded", () => {
       const videos = document.querySelectorAll("video");
 
       videos.forEach(video => {
         video.addEventListener("click", () => {
+
+          // 🍏 iPhone / iPad : API spéciale (seul mode garanti)
+          if (video.webkitEnterFullScreen) {
+            try {
+              video.webkitEnterFullScreen();
+              return; // empêcher l'autre mode
+            } catch (e) {
+              console.warn("Erreur webkitEnterFullScreen :", e);
+            }
+          }
+
+          // 💻 PC + Android : Fullscreen HTML5 standard
           if (video.requestFullscreen) {
             video.requestFullscreen();
           } else if (video.webkitRequestFullscreen) {
-            video.webkitRequestFullscreen(); // iPhone / Safari
+            video.webkitRequestFullscreen();
           } else if (video.msRequestFullscreen) {
-            video.msRequestFullscreen(); // Ancien Edge
+            video.msRequestFullscreen();
           }
+
         });
       });
     });
-
-    /* ⬆️⬆️⬆️ FIN SCRIPT FULLSCREEN ⬆️⬆️⬆️ */
 
 </script>
 
