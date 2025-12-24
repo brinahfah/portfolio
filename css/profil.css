@@ -1,7 +1,7 @@
 body {
     margin: 0;
     padding: 0;
-    background: linear-gradient(135deg, #5150c2, #6b68e0);
+    background: linear-gradient(135deg, #fa9cd6, #97517a);
     font-family: 'Montserrat', sans-serif;
     color: white;
 }
@@ -47,26 +47,135 @@ p {
     transform: scale(1.05);
 }
 
-button {
-    margin-top: 25px;
-    padding: 12px 25px;
-    font-size: 1.1rem;
-    border: none;
-    border-radius: 30px;
-    background: #ffffff;
-    color: #4a46c9;
-    cursor: pointer;
-    font-weight: 600;
-    transition: 0.3s ease;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
-}
-
-button:hover {
-    background: #e8e8ff;
-    transform: translateY(-3px);
-}
-
 @keyframes fadeIn {
     from { opacity: 0; transform: translateY(20px); }
     to { opacity: 1; transform: translateY(0); }
+}
+
+.cv-section, .video-section {
+    margin-top: 40px;
+    text-align: center;
+}
+
+.cv-section h3, .video-section h3 {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.cv-container, .video-container {
+    width: 90%;
+    max-width: 850px;
+    margin: auto;
+    padding: 20px;
+    background: white;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.15);
+    border: 2px solid #ddd;
+}
+
+.cv-container img, .video-container video {
+    width: 100%;
+    height: auto;
+    min-height: 300px;
+    border-radius: 10px;
+}
+
+.cv-download {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 10px 20px;
+    background: #e98ba7;
+    color: white;
+    text-decoration: none;
+    border-radius: 8px;
+    transition: 0.3s;
+    font-weight: 600;
+}
+
+.cv-download:hover {
+    background: #ec8dad;
+}
+
+button {
+    padding: 12px 24px;
+    background: linear-gradient(145deg, #dda5bd, #c788c9);
+    color: rgb(255, 255, 253);
+    font-weight: 600;
+    font-size: 1rem;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    box-shadow: 0 6px 15px rgba(245, 198, 231, 0.3);
+    transition: all 0.3s ease-in-out;
+    margin: 20px auto;
+    display: block; /* Centré automatiquement */
+}
+
+button:hover {
+    background: linear-gradient(145deg, #87078b, #dd17bf);
+    transform: scale(1.05);
+    box-shadow: 0 8px 20px rgba(219, 142, 178, 0.815);
+}
+
+footer {
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.5);
+    font-size: 0.9rem;
+    padding: 20px 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: 'Georgia', serif;
+}
+
+a {
+    color: white;
+}
+
+.logo img {
+    width: 50px;
+    border-radius: 100px;
+    margin-bottom: 10px;
+}
+
+/* Media Queries */
+@media (max-width: 1024px) {
+    h3 {
+        font-size: 1.8rem;
+    }
+    p {
+        font-size: 1.05rem;
+    }
+    .cv-container, .video-container {
+        width: 95%;
+        padding: 15px;
+    }
+}
+
+@media (max-width: 768px) {
+    h3 {
+        font-size: 1.6rem;
+    }
+    p {
+        font-size: 1rem;
+    }
+    button {
+        width: 80%;
+    }
+}
+
+@media (max-width: 480px) {
+    h3 {
+        font-size: 1.4rem;
+    }
+    p {
+        font-size: 0.95rem;
+    }
+    .cv-container img, .video-container video {
+        min-height: 200px;
+    }
+    footer {
+        font-size: 0.8rem;
+        padding: 15px 10px;
+    }
 }

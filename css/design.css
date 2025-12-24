@@ -43,7 +43,7 @@ h2 {
 
 /* ========== Navigation ========== */
 .TopLeft_part {
-  width: 88%;
+  width: 95%;
   height: 18%;
   background-color: rgb(231, 74, 231);
   display: flex;
@@ -110,7 +110,7 @@ h2 {
 .Animation_pictures {
   display: flex;
   position: relative;
-  top: 250px;
+  top: 25px;
   gap: 20px;
  
 }
@@ -148,12 +148,17 @@ footer {
   position: relative;
   padding-top:5px ;
   padding-bottom: 15px;
-  top: 250px;
+  top: 50px;
   display: flex;
+  flex-direction: column;
 }
 
+a{
+  color: white;
+}
 .logo img{
   width: 50px;
+  border-radius: 100px;
  
 }
 
@@ -208,9 +213,10 @@ footer {
   .Animation_pictures {
     top: 50px;
     flex-wrap: wrap;
+    display: flex;
+    flex-direction: column;
     justify-content: center;
     position: relative;
-   
     left: 0px;
     gap: 20px;
   }
@@ -225,6 +231,78 @@ footer {
     height: 20%;
     
   }
+}
+/* Tablettes */
+@media (min-width: 912px) and (max-width: 1368px) {
+  header, main, footer {
+    padding: 25px 15px;
+  }
+
+  .BottomCenter_part button {
+    width: 80%;
+    font-size: 1.2rem;
+    padding: 12px 20px;
+  }
+
+  .Animation_pictures {
+    top: 25px;
+    gap: 20px;
+  }
+}
+
+
+/* Petits écrans PC */
+@media (min-width: 820px) and (max-width: 1280px) {
+  .TopLeft_part {
+    width: 95%;
+    padding: 10px 20px;
+  }
+
+  .BottomCenter_part button {
+    width: auto;
+    font-size: 1.5rem;
+  }
+
+  .Animation_pictures {
+    top: 30px;
+    width: 48%
+  }
+
+  .image3{
+    position: relative;
+    left: 390px;
+    bottom: 160px;
+  }
+
+  .image4{
+    position: relative;
+    left: 680px;
+    bottom: 325px;
+    width: 100%;
+  }
+
+  .image4 img{
+    width: 61%;
+  }
+
+  .image6 img{
+    width: 61%;
+  }
+
+  .image5{
+    position: relative;
+    left: 37px;
+    bottom: 90px;
+    width: 100%;
+  }
+
+  .image6{
+    position: relative;
+    left: 77px;
+    bottom: 255px;
+    width: 100%;
+  }
+
 }
 
 @media (max-width: 768px) {
@@ -274,6 +352,18 @@ footer {
     
   }
 
+  
+  .image3{
+    position: relative;
+    left: 50px;
+  }
+
+   .image6{
+    position: relative;
+    right: 50px;
+
+  }
+
   .Animation_pictures span:nth-child(6) {
         position: relative;
         top: 0px;
@@ -309,6 +399,17 @@ footer {
     padding: 10px 20px;
   }
 
+  .image3{
+    position: relative;
+    left: 50px;
+  }
+
+  .image6{
+    position: relative;
+    right: 50px;
+
+  }
+
   .TopLeft_part {
 
     display: flex;
@@ -332,3 +433,4 @@ footer {
    
   }
 }
+

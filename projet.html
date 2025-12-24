@@ -1,121 +1,243 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Mes Projets</title>
-  <link rel="stylesheet" href="css/projet.css">
+  <link rel="stylesheet" href="css/projet.css" />
 </head>
 <body>
   <section class="projets">
-     <h1>Mes Projets</h1>
+    <h1 class="section-title">Mes Projets</h1>
 
-     <div class="slider">
-          <div class="slides">
+    <div class="slider">
+      <div class="slides">
 
-          <!-- Projet 1 -->
-          <div class="slide active">
-               <video src="images/projet_avis&comment.mp4" autoplay muted loop playsinline></video>
-               <div class="caption">
-               <h2>anonym_comment</h2>
-               <p>
-                    Une plateforme créée pour permettre aux élèves de contribuer 
-                    à l'avancement de l'école.
-               </p>
-               </div>
+        <!-- --- DIAPOSITIVE 1 --- -->
+        <div class="slide active">
+          <div class="slide-grid">
+
+            <div class="slide-text">
+              <div class="text-card">
+                <h2>Poki</h2>
+                <p>
+                 <strong>Poki</strong> est un mini-jeu de combat inspiré 
+                 des jeux classiques de combat, il revisite l’univers Pokémon. 
+                 Le joueur sélectionne deux Pokémon et les fait s’affronter 
+                 dans une arène animée, avec une interface rétro 
+                 et des effets visuels dynamiques.
+                 Le projet met l’accent sur le design avec des barres de vie animées 
+                 et une mise en scène du combat rappelant les jeux de versus.
+                 Les animations et transitions renforcent l’immersion et donnent 
+                 un style rétro-gaming moderne.
+                </p><br>
+                <h3>Technologies utilisées</h3><br>
+                <ul>
+                  <li>HTML5</li>
+                  <p>
+                   structure de l’interface (arène, HUD, sélection des Pokémon, boutons d’actions).
+                  </p><br>
+                  <li>CSS3</li>
+                  <p>
+                    Style rétro, animations, transitions, barres de vie et effets visuels.
+                  </p><br>
+                  <li>JavaScript (ES6+)</li>
+                  <p>
+                    logique du combat, gestion des états du jeu, manipulation dynamique du DOM et interactions utilisateur.
+                  </p><br>
+                  <li>API Pokémon (PokéAPI)</li>
+                  <p>
+                   récupération dynamique des données des Pokémon (statistiques, types, sprites) via requêtes fetch.
+                  </p><br>
+                  <li>JSON</li>
+                  <p>
+                    exploitation et traitement des données reçues pour alimenter la logique du jeu.
+                  </p><br>
+                  <li>Asynchrone</li>
+                  <p>
+                    utilisation de async / await pour un chargement fluide sans rechargement de page.
+                  </p>
+                  
+                </ul>
+                
+              </div>
+            </div>
+
+            <div class="media-container">
+              <div class="video-frame-pro">
+                <span class="demo-badge">DEMO</span>
+                <video 
+                  src="video/Combat Pokémon - Profil 2 – Microsoft​ Edge 2025-12-23 12-33-53.mp4"
+                  autoplay muted loop playsinline preload="metadata">
+                </video>
+              </div>
+            </div>
+
           </div>
-    
-          <!-- Boutons -->
-          <button class="prev">&#10094;</button>
-          <button class="next">&#10095;</button>
+        </div>
 
-          <!-- Indicateurs -->
-          <div class="dots"></div>
+        <!-- --- DIAPOSITIVE 2 --- -->
+        <div class="slide">
+          <div class="slide-grid">
 
-       </div>
-     </div>
+            <div class="slide-text">
+              <div class="text-card">
+                <h2>MaTodolist</h2>
+                <p>
+                  Une application de type “todolist” progressive (PWA) permettant 
+                  de créer, marquer comme terminées et supprimer des tâches, 
+                  avec la possibilité de recevoir des notifications de rappel. 
+                  L’application fonctionne aussi bien en ligne dans un navigateur 
+                  qu’installée sur mobile, offrant une expérience proche 
+                  d’une application native.
+                </p><br>
+                <h3>Technologies utilisées :</h3><br>
+                <ul>
+                  <li>HTML :</li>
+                  <p>
+                    structure de la page et éléments interactifs (input, boutons, liste).
+                  </p><br>
+                  <li>JavaScript :</li>
+                  <p>
+                    gestion dynamique des tâches, stockage local (localStorage), interactions 
+                    utilisateurs, notifications et logique de l’application.
+                  </p><br>
+                  <li>Service Worker:</li>
+                  <p>
+                   mise en cache des fichiers pour permettre l’utilisation hors ligne et gestion 
+                   des mises à jour de la PWA.
+                  </p><br>
+                  <li>Manifest.json :</li>
+                  <p>
+                   configuration de la PWA (icônes, thème, start_url, affichage standalone).
+                  </p><br>
+                  
+                </ul>
+              </div>
+            </div>
+
+            <div class="media-container">
+              <div class="video-frame-pro">
+                <span class="demo-badge">DEMO</span>
+                <video 
+                  src="video/MaTodolist.mp4"
+                  autoplay muted loop playsinline preload="metadata">
+                </video>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- --- DIAPOSITIVE 3 --- -->
+        <div class="slide">
+          <div class="slide-grid">
+
+            <div class="slide-text">
+              <div class="text-card">
+                <h2>Anonym_Avis&Comment</h2>
+                <p>
+                 Projet web interne pour une école permettant aux étudiants de partager 
+                 des avis anonymes sur les cours et enseignants. L’objectif est d’améliorer *
+                 la qualité pédagogique grâce à des retours constructifs, tout en garantissant 
+                 l’anonymat total des étudiants. Le site propose une interface simple et intuitive 
+                 pour les étudiants et un tableau de bord sécurisé pour l’administration.
+                </p><br>
+                <h3>Technologies utilisées</h3><br>
+                <ul>
+                  <li>HTML / CSS :</li>
+                  <p>
+                   Structure et style des pages web, interface responsive et ergonomique.
+                  </p><br>
+                  <li>JavaScript :</li>
+                  <p>
+                   Interactivité côté client, gestion des listes dynamiques et validation de formulaire.
+                  </p><br>
+                  <li>PHP :</li>
+                  <p>
+                   Traitement des formulaires, communication sécurisée avec la base de données.
+                  </p><br>
+                  <li>SQL (PostgreSQL via Supabase) :</li>
+                  <p>
+                   Stockage des cours, étudiants, commentaires et administrateurs, gestion sécurisée des données.
+                  </p><br>
+                  <li>PDO (PHP) :</li>
+                  <p>
+                   Connexion sécurisée à la base de données pour éviter les injections SQL.
+                  </p><br>
+                </ul>
+              </div>
+            </div>
+
+            <div class="media-container">
+              <div class="video-frame-pro">
+                <span class="demo-badge">DEMO</span>
+                <video 
+                  src="video/projet_avis_comment.mp4"
+                  autoplay muted loop playsinline preload="metadata">
+                </video>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+
+      <button class="prev">&#10094;</button>
+      <button class="next">&#10095;</button>
+      <div class="dots"></div>
+    </div>
   </section>
 
-<script>
+  <footer>
+    <p>&copy; 2025 ELY&BRI • Tous droits réservés</p>
+    <div class="logo">
+      <img src="images/my_logo.png" alt="elysee">
+      <p>Contact: 0634479149</p>
+      <a href="mailto:ebikie4@gmail.com">ebikie4@gmail.com</a><br><br>
+      <a href="https://www.linkedin.com/in/developperweb/" target="_blank">devbrinahlinkedin</a><br><br>
+      <a href="https://github.com/brinahfah" target="_blank">githubelybri</a>
+    </div>
+  </footer>
 
+  <!-- JS INCHANGÉ -->
+  <script>
     const slides = document.querySelectorAll(".slide");
     const nextBtn = document.querySelector(".next");
     const prevBtn = document.querySelector(".prev");
     const dotsContainer = document.querySelector(".dots");
-
     let currentIndex = 0;
 
-    // Création des points
     slides.forEach((_, index) => {
       const dot = document.createElement("span");
+      dot.className = "dot";
       dot.addEventListener("click", () => showSlide(index));
       dotsContainer.appendChild(dot);
     });
-    const dots = document.querySelectorAll(".dots span");
+    const dots = document.querySelectorAll(".dots .dot");
 
     function showSlide(index) {
-      slides.forEach(slide => slide.classList.remove("active"));
+      slides.forEach(slide => {
+        slide.classList.remove("active");
+        const txt = slide.querySelector(".text-card");
+        if (txt) txt.classList.remove("appear");
+      });
       dots.forEach(dot => dot.classList.remove("active"));
+
       slides[index].classList.add("active");
       dots[index].classList.add("active");
       currentIndex = index;
+
+      const card = slides[index].querySelector(".text-card");
+      if (card) setTimeout(() => card.classList.add("appear"), 120);
     }
 
-    function nextSlide() {
-      currentIndex = (currentIndex + 1) % slides.length;
-      showSlide(currentIndex);
-    }
+    nextBtn.addEventListener("click", () => showSlide((currentIndex + 1) % slides.length));
+    prevBtn.addEventListener("click", () => showSlide((currentIndex - 1 + slides.length) % slides.length));
 
-    function prevSlide() {
-      currentIndex = (currentIndex - 1 + slides.length) % slides.length;
-      showSlide(currentIndex);
-    }
-
-    nextBtn.addEventListener("click", nextSlide);
-    prevBtn.addEventListener("click", prevSlide);
-
-    // Diaporama automatique
-    setInterval(nextSlide, 6000);
-
-    // Initialisation
-    showSlide(currentIndex);
-
-
-
-    /* ============================================================
-       FULLSCREEN COMPATIBLE PC + ANDROID + iPHONE / iPAD
-       ============================================================ */
-    
-    document.addEventListener("DOMContentLoaded", () => {
-      const videos = document.querySelectorAll("video");
-
-      videos.forEach(video => {
-        video.addEventListener("click", () => {
-
-          // 🍏 iPhone / iPad : API spéciale (seul mode garanti)
-          if (video.webkitEnterFullScreen) {
-            try {
-              video.webkitEnterFullScreen();
-              return; // empêcher l'autre mode
-            } catch (e) {
-              console.warn("Erreur webkitEnterFullScreen :", e);
-            }
-          }
-
-          // 💻 PC + Android : Fullscreen HTML5 standard
-          if (video.requestFullscreen) {
-            video.requestFullscreen();
-          } else if (video.webkitRequestFullscreen) {
-            video.webkitRequestFullscreen();
-          } else if (video.msRequestFullscreen) {
-            video.msRequestFullscreen();
-          }
-
-        });
-      });
-    });
-
-</script>
-
+    //setInterval(() => showSlide((currentIndex + 1) % slides.length), 7000);
+    showSlide(0);
+  </script>
 </body>
 </html>
