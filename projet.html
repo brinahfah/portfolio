@@ -13,61 +13,35 @@
     <div class="slider">
       <div class="slides">
 
-        <!-- --- DIAPOSITIVE 1 --- -->
+        <!-- --- DIAPOSITIVE 1 : Poki --- -->
         <div class="slide active">
           <div class="slide-grid">
 
+            <!-- Texte -->
             <div class="slide-text">
               <div class="text-card">
                 <h2>Poki</h2>
                 <p>
-                 <strong>Poki</strong> est un mini-jeu de combat inspiré 
-                 des jeux classiques de combat, il revisite l’univers Pokémon. 
-                 Le joueur sélectionne deux Pokémon et les fait s’affronter 
-                 dans une arène animée, avec une interface rétro 
-                 et des effets visuels dynamiques.
-                 Le projet met l’accent sur le design avec des barres de vie animées 
-                 et une mise en scène du combat rappelant les jeux de versus.
-                 Les animations et transitions renforcent l’immersion et donnent 
-                 un style rétro-gaming moderne.
-                </p><br>
-                <h3>Technologies utilisées</h3><br>
-                <ul>
-                  <li>HTML5</li>
-                  <p>
-                   structure de l’interface (arène, HUD, sélection des Pokémon, boutons d’actions).
-                  </p><br>
-                  <li>CSS3</li>
-                  <p>
-                    Style rétro, animations, transitions, barres de vie et effets visuels.
-                  </p><br>
-                  <li>JavaScript (ES6+)</li>
-                  <p>
-                    logique du combat, gestion des états du jeu, manipulation dynamique du DOM et interactions utilisateur.
-                  </p><br>
-                  <li>API Pokémon (PokéAPI)</li>
-                  <p>
-                   récupération dynamique des données des Pokémon (statistiques, types, sprites) via requêtes fetch.
-                  </p><br>
-                  <li>JSON</li>
-                  <p>
-                    exploitation et traitement des données reçues pour alimenter la logique du jeu.
-                  </p><br>
-                  <li>Asynchrone</li>
-                  <p>
-                    utilisation de async / await pour un chargement fluide sans rechargement de page.
-                  </p>
+                  <strong>Poki</strong> est un mini-jeu de combat inspiré des classiques Pokémon. 
+                  Le joueur sélectionne deux Pokémon et les fait s’affronter dans une arène animée.
                   
+                </p>
+                <h3>Technologies utilisées :</h3>
+                <ul>
+                  <li>HTML5, CSS3, JavaScript (ES6+), API Pokémon, JSON, Async/Await</li>
                 </ul>
-                
               </div>
             </div>
 
+            <!-- Mini-slider images + vidéo -->
             <div class="media-container">
-              <div class="video-frame-pro">
-                <span class="demo-badge">DEMO</span>
+              <div class="mini-slider">
+                <img src="images/page_d'acceuil_jeux.png" alt="Poki screenshot 1" class="media-slide active" />
+                <img src="images/mode_d_emploi_jeux.png" alt="Poki screenshot 2" class="media-slide" />
+                <img src="images/selection_des_joueurs.png" alt="Poki screenshot 3" class="media-slide" />
                 <video 
-                  src="video/Combat Pokémon - Profil 2 – Microsoft​ Edge 2025-12-23 12-33-53.mp4"
+                  src="video/poki_jeux.mp4"
+                  class="media-slide"
                   autoplay muted loop playsinline preload="metadata">
                 </video>
               </div>
@@ -76,7 +50,7 @@
           </div>
         </div>
 
-        <!-- --- DIAPOSITIVE 2 --- -->
+        <!-- --- DIAPOSITIVE 2 : MaTodolist --- -->
         <div class="slide">
           <div class="slide-grid">
 
@@ -84,43 +58,106 @@
               <div class="text-card">
                 <h2>MaTodolist</h2>
                 <p>
-                  Une application de type “todolist” progressive (PWA) permettant 
-                  de créer, marquer comme terminées et supprimer des tâches, 
-                  avec la possibilité de recevoir des notifications de rappel. 
-                  L’application fonctionne aussi bien en ligne dans un navigateur 
-                  qu’installée sur mobile, offrant une expérience proche 
-                  d’une application native.
-                </p><br>
-                <h3>Technologies utilisées :</h3><br>
-                <ul>
-                  <li>HTML :</li>
-                  <p>
-                    structure de la page et éléments interactifs (input, boutons, liste).
-                  </p><br>
-                  <li>JavaScript :</li>
-                  <p>
-                    gestion dynamique des tâches, stockage local (localStorage), interactions 
-                    utilisateurs, notifications et logique de l’application.
-                  </p><br>
-                  <li>Service Worker:</li>
-                  <p>
-                   mise en cache des fichiers pour permettre l’utilisation hors ligne et gestion 
-                   des mises à jour de la PWA.
-                  </p><br>
-                  <li>Manifest.json :</li>
-                  <p>
-                   configuration de la PWA (icônes, thème, start_url, affichage standalone).
-                  </p><br>
-                  
-                </ul>
+                  Une application PWA pour créer, avec une interface utilisateur pour la gestion,
+                  un système de notification rappel, un système de sauvegarde locale, fonctionnalités
+                  d'export et d'import des tâches, système feedback utilisateur et un service worker 
+                  permettant l'utilisation hors ligne(mini tutoriel, captures d'écran de l'application, 
+                  code source, video de démo).
+                </p>
+              <br>
+
+                
+                <!-- Compétence 1 -->
+  <div class="competence">
+    <h3>1️⃣ Gérer le patrimoine informatique</h3>
+    <p><strong>Intitulé :</strong> Gestion des ressources et des données d’une application de gestion de tâches.</p>
+    
+    <h4>Recenser et identifier les ressources numériques</h4>
+    <p><em>Preuve :</em> Organisation structurée des fichiers du projet.</p>
+    <ul>
+      <li>index.html</li>
+      <li>script.js</li>
+      <li>style.css</li>
+      <li>manifest.json</li>
+      <li>service-worker.js</li>
+      <li>dossier images</li>
+    </ul>
+
+    <h4>Vérifier la continuité d’un service informatique</h4>
+    <p><em>Preuve :</em> Utilisation d’un Service Worker pour fonctionnement hors ligne.</p>
+    <ul>
+      <li>service-worker.js</li>
+      <li>Mise en cache des fichiers</li>
+      <li>Application fonctionnelle sans connexion</li>
+    </ul>
+
+    <h4>Gérer des sauvegardes</h4>
+    <p><em>Preuve :</em> Système de sauvegarde et restauration des tâches.</p>
+    <ul>
+      <li>Export/import des tâches en JSON</li>
+      <li>Stockage dans localStorage</li>
+    </ul>
+  </div><br>
+
+  <!-- Compétence 2 -->
+  <div class="competence">
+    <h3>2️⃣ Répondre aux incidents et aux demandes</h3>
+    <p><strong>Intitulé :</strong> Collecte et traitement des retours utilisateurs.</p>
+
+    <h4>Collecter et orienter des demandes</h4>
+    <p><em>Preuve :</em> Système de feedback utilisateur.</p>
+    <ul>
+      <li>Formulaire de feedback</li>
+      <li>Stockage des messages</li>
+      <li>Interface de consultation</li>
+    </ul>
+
+    <h4>Traiter les demandes</h4>
+    <p><em>Preuve :</em> Améliorations de l’application selon les besoins.</p>
+    <ul>
+      <li>Notifications de rappel</li>
+      <li>Export/import des tâches</li>
+      <li>Amélioration de l’interface</li>
+    </ul>
+  </div><br>
+
+  <!-- Compétence 3 -->
+  <div class="competence">
+    <h3>3️⃣ Mettre à disposition un service informatique</h3>
+    <p><strong>Intitulé :</strong> Développement et mise à disposition d’une PWA accessible via navigateur.</p>
+
+    <h4>Tests d’intégration et d’acceptation</h4>
+    <p><em>Preuve :</em> Vérification des fonctionnalités clés.</p>
+    <ul>
+      <li>Ajout/suppression de tâches</li>
+      <li>Marquage des tâches terminées</li>
+      <li>Notifications</li>
+      <li>Export/import</li>
+      <li>Fonctionnement hors ligne</li>
+    </ul>
+
+    <h4>Déploiement et accompagnement</h4>
+    <p><em>Preuve :</em> Application accessible et tutoriel intégré.</p>
+    <ul>
+      <li>Exécution via Live Server</li>
+      <li>Installation comme PWA</li>
+      <li>Modal de bienvenue et guide d’utilisation</li>
+    </ul>
+  </div>
+
+
+              <br>
               </div>
             </div>
 
             <div class="media-container">
-              <div class="video-frame-pro">
-                <span class="demo-badge">DEMO</span>
+              <div class="mini-slider">
+                <img src="images/Mode d'emploi todolist.png" alt="Todolist screenshot 1" class="media-slide active" />
+                <img src="images/todolist.png" alt="Todolist screenshot 2" class="media-slide" />
+                 <img src="images/notifications.png" alt="Todolist screenshot 3" class="media-slide" />
                 <video 
-                  src="video/MaTodolist.mp4"
+                  src="video/todolist.mp4"
+                  class="media-slide"
                   autoplay muted loop playsinline preload="metadata">
                 </video>
               </div>
@@ -129,7 +166,7 @@
           </div>
         </div>
 
-        <!-- --- DIAPOSITIVE 3 --- -->
+        <!-- --- DIAPOSITIVE 3 : Anonym_Avis&Comment --- -->
         <div class="slide">
           <div class="slide-grid">
 
@@ -137,43 +174,28 @@
               <div class="text-card">
                 <h2>Anonym_Avis&Comment</h2>
                 <p>
-                 Projet web interne pour une école permettant aux étudiants de partager 
-                 des avis anonymes sur les cours et enseignants. L’objectif est d’améliorer *
-                 la qualité pédagogique grâce à des retours constructifs, tout en garantissant 
-                 l’anonymat total des étudiants. Le site propose une interface simple et intuitive 
-                 pour les étudiants et un tableau de bord sécurisé pour l’administration.
-                </p><br>
-                <h3>Technologies utilisées</h3><br>
+                  Projet web interne pour une école permettant aux étudiants de partager des avis anonymes sur les cours.
+                </p>
+                <h3>Technologies utilisées :</h3>
                 <ul>
-                  <li>HTML / CSS :</li>
-                  <p>
-                   Structure et style des pages web, interface responsive et ergonomique.
-                  </p><br>
-                  <li>JavaScript :</li>
-                  <p>
-                   Interactivité côté client, gestion des listes dynamiques et validation de formulaire.
-                  </p><br>
-                  <li>PHP :</li>
-                  <p>
-                   Traitement des formulaires, communication sécurisée avec la base de données.
-                  </p><br>
-                  <li>SQL (PostgreSQL via Supabase) :</li>
-                  <p>
-                   Stockage des cours, étudiants, commentaires et administrateurs, gestion sécurisée des données.
-                  </p><br>
-                  <li>PDO (PHP) :</li>
-                  <p>
-                   Connexion sécurisée à la base de données pour éviter les injections SQL.
-                  </p><br>
+                  <li>HTML, CSS, JavaScript, PHP, PostgreSQL via Supabase, PDO</li>
                 </ul>
               </div>
             </div>
 
             <div class="media-container">
-              <div class="video-frame-pro">
-                <span class="demo-badge">DEMO</span>
+              <div class="mini-slider">
+                <img src="images/acceuil_etudiant.png" alt="Anonym screenshot 1" class="media-slide active" />
+                <img src="images/authentification.png" alt="Anonym screenshot 2" class="media-slide" />
+                <img src="images/page_comment.png" alt="Anonym screenshot 3" class="media-slide" />
+                <img src="images/page_admin.png" alt="Anonym screenshot 4" class="media-slide" />
+                <img src="images/connexion_admin.png" alt="Anonym screenshot 5" class="media-slide" />
+                <img src="images/affichage_comment.png" alt="Anonym screenshot 6" class="media-slide" />
+                <img src="images/gestion_de_cours.png" alt="Anonym screenshot 7" class="media-slide" />
+                <img src="images/journalisation.png" alt="Anonym screenshot 8" class="media-slide" />
                 <video 
-                  src="video/projet_avis_comment.mp4"
+                  src="video/anonym_comment.mp4"
+                  class="media-slide"
                   autoplay muted loop playsinline preload="metadata">
                 </video>
               </div>
@@ -201,7 +223,7 @@
     </div>
   </footer>
 
-  <!-- JS INCHANGÉ -->
+  <!-- JS principal pour les slides + mini-slider -->
   <script>
     const slides = document.querySelectorAll(".slide");
     const nextBtn = document.querySelector(".next");
@@ -236,8 +258,24 @@
     nextBtn.addEventListener("click", () => showSlide((currentIndex + 1) % slides.length));
     prevBtn.addEventListener("click", () => showSlide((currentIndex - 1 + slides.length) % slides.length));
 
-    //setInterval(() => showSlide((currentIndex + 1) % slides.length), 7000);
     showSlide(0);
+
+    // -------------------------------
+    // Mini-slider interne images + vidéo
+    const miniSliders = document.querySelectorAll(".mini-slider");
+
+    miniSliders.forEach(slider => {
+      const slides = slider.querySelectorAll(".media-slide");
+      let current = 0;
+
+      function showNext() {
+        slides[current].classList.remove("active");
+        current = (current + 1) % slides.length;
+        slides[current].classList.add("active");
+      }
+
+      setInterval(showNext, 3000); // défiler toutes les 3s
+    });
   </script>
 </body>
 </html>

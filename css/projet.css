@@ -67,8 +67,7 @@ body {
 .text-card h3 {  color: #e6fbff; text-shadow: 0 0 8px rgba(0,245,255,0.25); }
 .text-card p { font-size: 1rem; line-height: 1.5; color: #dcefff; }
 
-/* Media */
-.media-container { display: flex; align-items: center; justify-content: center; }
+
 .media-container video, .media-container img {
   width: 100%;
   height: 420px;
@@ -95,6 +94,52 @@ button.next { right: -10px; }
 .dots { text-align: center; margin-top: 14px; }
 .dots .dot { display: inline-block; width: 10px; height: 10px; margin: 0 6px; background: rgba(255,255,255,0.25); border-radius: 50%; cursor: pointer; }
 .dots .dot.active { background: #00f5ff; box-shadow: 0 0 8px rgba(0,245,255,0.25); }
+
+/* Mini-slider images + vidéo amélioré */
+.mini-slider {
+  position: relative;
+  width: 100%;
+  height: 420px; /* tu peux ajuster ou mettre min-height */
+  overflow: hidden;
+  border-radius: 12px;
+  background-color: #000; /* Fond noir pour les zones vides */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.mini-slider .media-slide {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0; left: 0;
+  opacity: 0;
+  transition: opacity 0.8s ease;
+  object-fit: contain; /* <-- important : pas de zoom, ratio respecté */
+  background-color: #000; /* assure un fond uniforme */
+}
+
+.mini-slider .media-slide.active {
+  opacity: 1;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .mini-slider { height: 300px; }
+}
+@media (max-width: 480px) {
+  .mini-slider { height: 220px; }
+}
+
+
+/* Responsive mini-slider */
+@media (max-width: 900px) {
+  .mini-slider { height: 300px; }
+}
+@media (max-width: 480px) {
+  .mini-slider { height: 220px; }
+}
+
 
 /* Responsive */
 @media (max-width: 900px) {
