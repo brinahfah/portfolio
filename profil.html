@@ -3,49 +3,89 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Profil</title>
-
+    <title>Mes Compétences</title>
     <link rel="stylesheet" href="css/profil.css">
-    <link rel="stylesheet" href="css/transition.css">
-
-    <link href="https://fonts.googleapis.com/css2?family=Roboto&family=Open+Sans&family=Lato&family=Montserrat:wght@400;600;700&family=Oswald&family=Playfair+Display&display=swap" rel="stylesheet">
 </head>
-
 <body>
-  <div class="cv-section">
-    <h3><strong>Mon CV</strong></h3>
 
-    <div class="cv-container">
-        <img src="images/CV.png" alt="CV de Elysee">
+<section class="section-skills">
+
+    <h1>Mes Compétences</h1>
+
+    <!-- FRONTEND -->
+    <h2>Front-End</h2>
+    <div class="skills-container">
+        <div class="skill-card">
+            <h3>HTML</h3>
+            <div class="progress"><div class="progress-bar html"></div></div>
+            <p>Structure des pages web</p>
+        </div>
+        <div class="skill-card">
+            <h3>CSS</h3>
+            <div class="progress"><div class="progress-bar css"></div></div>
+            <p>Design et responsive</p>
+        </div>
+        <div class="skill-card">
+            <h3>JavaScript</h3>
+            <div class="progress"><div class="progress-bar js"></div></div>
+            <p>Interactions web</p>
+        </div>
     </div>
 
-
-        <div class="video-section">
-            <h3><strong>Ma vidéo CV</strong></h3>
-
-            <div class="video-container">
-                <video controls>
-                    <source src="video/my_cv.mp4" type="video/mp4">
-                    Votre navigateur ne supporte pas la vidéo.
-                </video>
-            </div>
+    <!-- FRAMEWORK -->
+    <h2>Frameworks</h2>
+    <div class="skills-container">
+        <div class="skill-card">
+            <h3>Bootstrap</h3>
+            <div class="progress"><div class="progress-bar bootstrap"></div></div>
         </div>
-
+        <div class="skill-card">
+            <h3>Flutter</h3>
+            <div class="progress"><div class="progress-bar flutter"></div></div>
+        </div>
     </div>
 
-    <button onclick="window.location.href='index.html'">Retour</button>
-        
-    <footer>
-        <p>&copy; 2025 ELY&BRI • Tous droits réservés</p>
-        <div class="logo">
-            <img src="images/my_logo.png" alt="elysee" >
-            <p>Contact: 0634479149</p>
-            <a href="https://mail.google.com/mail/u/0/#inbox" target="blank">ebikie4@gmail.com</a><br><br>
-            <a href="https://www.linkedin.com/in/developperweb/" target="blank">devbrinahlinkedin</a><br><br>
-            <a href="https://github.com/brinahfah" target="blank">githubelybri</a>
-            
+    <!-- BACKEND -->
+    <h2>Back-End</h2>
+    <div class="skills-container">
+        <div class="skill-card">
+            <h3>PHP</h3>
+            <div class="progress"><div class="progress-bar php"></div></div>
         </div>
-    </footer>
-    
+        <div class="skill-card">
+            <h3>Python</h3>
+            <div class="progress"><div class="progress-bar python"></div></div>
+        </div>
+    </div>
+
+    <!-- BASE DE DONNEES -->
+    <h2>Base de données</h2>
+    <div class="skills-container">
+        <div class="skill-card">
+            <h3>SQL / PostgreSQL</h3>
+            <div class="progress"><div class="progress-bar sql"></div></div>
+        </div>
+        <div class="skill-card">
+            <h3>Firebase</h3>
+            <div class="progress"><div class="progress-bar firebase"></div></div>
+        </div>
+    </div>
+
+    <!-- OUTILS -->
+    <h2>Outils</h2>
+    <ul class="tools">
+        <li>Linux</li>
+        <li>Apache</li>
+        <li>Git</li>
+        <li>VS Code</li>
+        <li>Android Studio</li>
+    </ul>
+
+    <button onclick="window.location.href='tbb_synthèse.html'">
+        Compétence Référentiel
+    </button>
+
+</section>
+
 </body>
 </html>

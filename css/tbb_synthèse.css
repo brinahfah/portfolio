@@ -1,0 +1,35 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #0f0f1a;
+    color: #ffffff;
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    text-align: center;
+    color: #7c8cff;
+}
+
+.cv-container img {
+    width: 100%;
+    height: auto;
+    max-height: none;
+    object-fit: contain;
+    border-radius: 8px;
+}
+
+.cv-download {
+    display: inline-block;
+    margin: 20px auto;
+    padding: 10px 20px;
+    background-color: #7c8cff;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    text-align: center;
+}
+
+.cv-download:hover {
+    background-color: #5a68d1;
+}
