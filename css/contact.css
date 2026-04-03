@@ -39,3 +39,27 @@ h1{
 .contact-item a:hover{
     color:#7c8cff;
 }
+
+.nav-link {
+  position: relative;
+  text-decoration: none;
+  color: white;
+  padding: 10px;
+}
+
+/* 🔥 lien actif */
+.nav-link.active {
+  color: #ffd700;
+}
+
+/* petite barre stylée */
+.nav-link.active::after {
+  content: "";
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  background: #ffd700;
+  border-radius: 2px;
+}

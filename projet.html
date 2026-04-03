@@ -7,6 +7,17 @@
   <link rel="stylesheet" href="css/projet.css" />
 </head>
 <body>
+
+  <nav class="TopLeft_part">
+    <a href="index.html" class="nav-link">Accueil</a>
+    <a href="sommaire.html" class="nav-link">Parcours</a>
+    <a href="profil.html" class="nav-link">Compétence</a>
+    <a href="projet.html" class="nav-link">Réalisation</a>
+    <a href="veille_tech.html" class="nav-link">Veille Technologique</a>
+    <a href="contact.html" class="nav-link">Contact</a>
+  </nav>
+
+
   <section class="projets">
     <h1 class="section-title">Mes Projets</h1>
 
@@ -306,6 +317,17 @@
     // 🔥 FIX bouton retour navigateur
     window.addEventListener("pageshow", function () {
       document.body.classList.remove("fade-out");
+    });
+
+    const links = document.querySelectorAll('.nav-link');
+      const currentPage = window.location.pathname.split("/").pop();
+
+      links.forEach(link => {
+      const linkHref = link.getAttribute("href");
+
+      if (linkHref === currentPage) {
+        link.classList.add("active");
+      }
     });
    
   </script>

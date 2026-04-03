@@ -134,3 +134,27 @@ button:hover {
         font-size: 30px;
     }
 }
+
+.nav-link {
+  position: relative;
+  text-decoration: none;
+  color: white;
+  padding: 10px;
+}
+
+/* 🔥 lien actif */
+.nav-link.active {
+  color:#472541;
+}
+
+/* petite barre stylée */
+.nav-link.active::after {
+  content: "";
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  background: #602561;
+  border-radius: 2px;
+}
