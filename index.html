@@ -1,149 +1,110 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Portfolio</title>
-  <link rel="stylesheet" href="css/design.css" />
-  <link rel="stylesheet" href="css/transition.css" />
+
+  <link rel="stylesheet" href="css/design.css">
+  <link rel="stylesheet" href="css/transition.css">
 </head>
+
 <body>
-  <header class="reveal">
-    <nav class="TopLeft_part">
-      <a href="index.html">acceuil</a>
-      <a href="sommaire.html">Parcours</a>
-      <a href="profil.html">Compétence</a>
-      <a href="projet.html">réalisation</a>
-      <a href="veille_tech.html">Veille Technologique</a>
-      <a href="contact.html">Contact</a>
-    </nav>
 
-  </header>
+<header>
+  <nav class="navbar">
+    <a href="index.html" class="nav-link">Accueil</a>
+    <a href="sommaire.html" class="nav-link">Parcours</a>
+    <a href="profil.html" class="nav-link">Compétence</a>
+    <a href="projet.html" class="nav-link">Réalisation</a>
+    <a href="veille_tech.html" class="nav-link">Veille</a>
+    <a href="contact.html" class="nav-link">Contact</a>
+  </nav>
+</header>
 
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-content">
+    <h1>Web Designer</h1>
+    <p>Création de sites modernes, interactifs et performants</p>
 
-</div>
-  <main class="reveal">
-    <h1>Web & Designer</h1>
-   
-    
-   
-    <div class="Animation_pictures">
-      <span><div class="image1"><img src="icon_language/css.png" alt="css" width="55%" /></div></span>
-      <span><div class="image3"><img src="icon_language/html.png" alt="html" width="55%" /></div></span>
-      <span><div class="image4"><img src="icon_language/javascript.png" alt="javascript" width="55%" /></div></span>
-      <span><div class="image5"><img src="icon_language/php.png" alt="php" width="55%" /></div></span>
-      <span><div class="image6"><img src="icon_language/python.png" alt="python" /></div></span>
+    <div class="buttons">
+      <a href="projet.html" class="btn primary">Voir mes projets</a>
+      <a href="contact.html" class="btn secondary">Me contacter</a>
     </div>
-  </main>
+  </div>
 
-  <div class="presentation">
+  <div class="icons">
+    <img src="icon_language/html.png">
+    <img src="icon_language/css.png">
+    <img src="icon_language/javascript.png">
+    <img src="icon_language/php.png">
+  </div>
+</section>
 
-    <h3>Présentation</h3>
+<!-- PRESENTATION -->
+<section class="presentation">
+  <h2>Présentation</h2>
+  <p>
+    Bonjour, je m'appelle <strong>BIKIE BOUBENGA Elysee</strong>.<br><br>
+    Passionnée par le développement web et le design, je crée des expériences digitales modernes.
+  </p>
+</section>
 
-    <p>
-        Bonjour, je m'appelle <strong>BIKIE BOUBENGA Elysee Brinah Fah</strong>.<br><br>
+<!-- CV + VIDEO -->
+<section class="cv-video">
 
-        Passionnée par le développement web et le design, j'aime créer des projets 
-        qui mettent en valeur mes compétences tout en relevant de nouveaux défis. 
-        Mon portfolio reflète mon travail sur des sites interactifs, des applications 
-        et des interfaces multimédias, où chaque réalisation est à la fois un moyen 
-        d'apprentissage et un défi personnel.
-        <br><br>
-        J'y explore la valorisation de l'image numérique, l'amélioration de la 
-        visibilité en ligne et le perfectionnement constant de mes projets 
-        pour enrichir mon parcours professionnel.
-    </p>
+  <div class="card">
+    <h3>Mon CV</h3>
+    <img src="images/CV.png">
+    <a href="mon_cv/mon_cv.pdf" download class="btn primary">Télécharger</a>
+  </div>
 
-</div>
-
- <section class="cv-video-section">
-
-    <!-- CV -->
-    <div class="cv-section">
-        <h3>Mon CV</h3>
-
-        <div class="cv-container">
-            <img src="images/CV.png" alt="Aperçu CV">
-
-            <a href="mon_cv/mon_cv.pdf" download class="cv-download">
-                Télécharger mon CV
-            </a>
-        </div>
-    </div>
-
-    <!-- Vidéo -->
-    <div class="video-section">
-        <h3>Vidéo de présentation</h3>
-
-        <div class="video-container">
-            <video controls>
-                <source src="video/my_cv.mp4" type="video/mp4">
-            </video>
-        </div>
-    </div>
+  <div class="card">
+    <h3>Présentation vidéo</h3>
+    <video controls>
+      <source src="video/my_cv.mp4" type="video/mp4">
+    </video>
+  </div>
 
 </section>
 
-  <footer>
-    <p>&copy; 2025 ELY&BRI • Tous droits réservés</p>
-    <div class="logo">
-        <img src="images/my_logo.png" alt="elysee" >
-        <p>Contact: 0634479149</p>
-        <a href="https://mail.google.com/mail/u/0/#inbox" target="blank">ebikie4@gmail.com</a><br><br>
-        <a href="https://www.linkedin.com/in/developperweb/" target="blank">devbrinahlinkedin</a><br><br>
-         <a href="https://github.com/brinahfah" target="blank">githubelybri</a>
-        
-    </div>
-  </footer>
+<footer>
+  <p>© 2025 ELY&BRI</p>
+</footer>
 
-  <script>
-    
-    document.addEventListener('DOMContentLoaded', function () {
-      const links = document.querySelectorAll('a');
+<script>
+/* transition */
+document.querySelectorAll('a').forEach(link => {
+  link.addEventListener('click', function(e) {
+    const href = this.getAttribute('href');
 
-      links.forEach(link => {
-        link.addEventListener('click', function (event) {
-          const href = this.getAttribute('href');
+    if (!href || href.startsWith('http')) return;
 
-          if (!href || href.startsWith('#') || href.startsWith('http')) return;
+    e.preventDefault();
+    document.body.classList.add('fade-out');
 
-          event.preventDefault();
+    setTimeout(() => {
+      window.location.href = href;
+    }, 400);
+  });
+});
 
-          document.body.classList.add('fade-out');
+/* FIX retour navigateur */
+window.addEventListener("pageshow", () => {
+  document.body.classList.remove("fade-out");
+});
 
-          setTimeout(() => {
-            window.location.href = href;
-          }, 500);
-        });
-      });
-    });
+/* menu actif */
+const links = document.querySelectorAll('.nav-link');
+const current = window.location.pathname.split("/").pop();
 
-    // 🔥 FIX bouton retour navigateur
-    window.addEventListener("pageshow", function () {
-      document.body.classList.remove("fade-out");
-    });
-   
-  </script>
-
-  <script>
-      
-    const reveals = document.querySelectorAll('.reveal');
-
-      function handleReveal() {
-        for (const element of reveals) {
-          const windowHeight = window.innerHeight;
-          const elementTop = element.getBoundingClientRect().top;
-          const revealPoint = 100;
-
-          if (elementTop < windowHeight - revealPoint) {
-            element.classList.add('active');
-          }
-        }
-      }
-
-      window.addEventListener('scroll', handleReveal);
-      window.addEventListener('load', handleReveal); // Au chargement initial
-  </script>
+links.forEach(link => {
+  if(link.getAttribute("href") === current){
+    link.classList.add("active");
+  }
+});
+</script>
 
 </body>
 </html>
