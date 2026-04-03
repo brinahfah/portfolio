@@ -97,27 +97,28 @@
   </footer>
 
   <script>
-    document.addEventListener('DOMContentLoaded', function () {
-      const links = document.querySelectorAll('a');
-      const container = document.querySelector('.reveal');
-      const pictures = document.querySelectorAll('.Animation_pictures span');
+    
+      document.addEventListener('DOMContentLoaded', function () {
+    const links = document.querySelectorAll('a');
 
-      links.forEach(link => {
-        link.addEventListener('click', function (event) {
-          if (this.getAttribute('href').includes('http')) return;
+    links.forEach(link => {
+      link.addEventListener('click', function (event) {
+        const href = this.getAttribute('href');
 
-          event.preventDefault();
-          document.body.classList.add('fade-out');
-          container.classList.add('fade-out');
-          pictures.forEach(pic => pic.classList.add('fade-out'));
+        // 🔥 Ignore liens externes + ancres + fichiers
+        if (!href || href.startsWith('#') || href.startsWith('http')) return;
 
-          const href = this.getAttribute('href');
-          setTimeout(() => {
-            window.location.href = href;
-          }, 700);
-        });
+        event.preventDefault();
+
+        document.body.classList.add('fade-out');
+
+        setTimeout(() => {
+          window.location.href = href;
+        }, 500);
       });
     });
+  });
+   
   </script>
 
     <script>

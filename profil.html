@@ -8,84 +8,94 @@
 </head>
 <body>
 
-<section class="section-skills">
+    <section class="section-skills">
 
-    <h1>Mes Compétences</h1>
+        <h1>Mes Compétences</h1>
 
-    <!-- FRONTEND -->
-    <h2>Front-End</h2>
-    <div class="skills-container">
-        <div class="skill-card">
-            <h3>HTML</h3>
-            <div class="progress"><div class="progress-bar html"></div></div>
-            <p>Structure des pages web</p>
+        <!-- FRONTEND -->
+        <h2>Front-End</h2>
+        <div class="skills-container">
+            <div class="skill-card">
+                <h3>HTML</h3>
+                <div class="progress"><div class="progress-bar html"></div></div>
+                <p>Structure des pages web</p>
+            </div>
+            <div class="skill-card">
+                <h3>CSS</h3>
+                <div class="progress"><div class="progress-bar css"></div></div>
+                <p>Design et responsive</p>
+            </div>
+            <div class="skill-card">
+                <h3>JavaScript</h3>
+                <div class="progress"><div class="progress-bar js"></div></div>
+                <p>Interactions web</p>
+            </div>
         </div>
-        <div class="skill-card">
-            <h3>CSS</h3>
-            <div class="progress"><div class="progress-bar css"></div></div>
-            <p>Design et responsive</p>
-        </div>
-        <div class="skill-card">
-            <h3>JavaScript</h3>
-            <div class="progress"><div class="progress-bar js"></div></div>
-            <p>Interactions web</p>
-        </div>
-    </div>
 
-    <!-- FRAMEWORK -->
-    <h2>Frameworks</h2>
-    <div class="skills-container">
-        <div class="skill-card">
-            <h3>Bootstrap</h3>
-            <div class="progress"><div class="progress-bar bootstrap"></div></div>
+        <!-- FRAMEWORK -->
+        <h2>Frameworks</h2>
+        <div class="skills-container">
+            <div class="skill-card">
+                <h3>Bootstrap</h3>
+                <div class="progress"><div class="progress-bar bootstrap"></div></div>
+            </div>
+            <div class="skill-card">
+                <h3>Flutter</h3>
+                <div class="progress"><div class="progress-bar flutter"></div></div>
+            </div>
         </div>
-        <div class="skill-card">
-            <h3>Flutter</h3>
-            <div class="progress"><div class="progress-bar flutter"></div></div>
-        </div>
-    </div>
 
-    <!-- BACKEND -->
-    <h2>Back-End</h2>
-    <div class="skills-container">
-        <div class="skill-card">
-            <h3>PHP</h3>
-            <div class="progress"><div class="progress-bar php"></div></div>
+        <!-- BACKEND -->
+        <h2>Back-End</h2>
+        <div class="skills-container">
+            <div class="skill-card">
+                <h3>PHP</h3>
+                <div class="progress"><div class="progress-bar php"></div></div>
+            </div>
+            <div class="skill-card">
+                <h3>Python</h3>
+                <div class="progress"><div class="progress-bar python"></div></div>
+            </div>
         </div>
-        <div class="skill-card">
-            <h3>Python</h3>
-            <div class="progress"><div class="progress-bar python"></div></div>
+
+        <!-- BASE DE DONNEES -->
+        <h2>Base de données</h2>
+        <div class="skills-container">
+            <div class="skill-card">
+                <h3>SQL / PostgreSQL</h3>
+                <div class="progress"><div class="progress-bar sql"></div></div>
+            </div>
+            <div class="skill-card">
+                <h3>Firebase</h3>
+                <div class="progress"><div class="progress-bar firebase"></div></div>
+            </div>
         </div>
-    </div>
 
-    <!-- BASE DE DONNEES -->
-    <h2>Base de données</h2>
-    <div class="skills-container">
-        <div class="skill-card">
-            <h3>SQL / PostgreSQL</h3>
-            <div class="progress"><div class="progress-bar sql"></div></div>
-        </div>
-        <div class="skill-card">
-            <h3>Firebase</h3>
-            <div class="progress"><div class="progress-bar firebase"></div></div>
-        </div>
-    </div>
+        <!-- OUTILS -->
+        <h2>Outils</h2>
+        <ul class="tools">
+            <li>Linux</li>
+            <li>Apache</li>
+            <li>Git</li>
+            <li>VS Code</li>
+            <li>Android Studio</li>
+        </ul>
 
-    <!-- OUTILS -->
-    <h2>Outils</h2>
-    <ul class="tools">
-        <li>Linux</li>
-        <li>Apache</li>
-        <li>Git</li>
-        <li>VS Code</li>
-        <li>Android Studio</li>
-    </ul>
+        <button onclick="window.location.href='tbb_synthèse.html'">
+            Compétence Référentiel
+        </button>
 
-    <button onclick="window.location.href='tbb_synthèse.html'">
-        Compétence Référentiel
-    </button>
+    </section>
 
-</section>
+    <script>
+
+        window.addEventListener("pageshow", function (event) {
+        if (event.persisted) {
+            window.location.reload();
+        }
+        });
+        
+    </script>
 
 </body>
 </html>
