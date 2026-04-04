@@ -91,10 +91,10 @@ h2{
 .js{width:15%;}
 .bootstrap{width:10%;}
 .flutter{width:20%;}
-.php{width:65%;}
-.python{width:30%;}
-.sql{width:50%;}
-.firebase{width:35%;}
+.php{width:45%;}
+.python{width:20%;}
+.sql{width:40%;}
+.firebase{width:25%;}
 
 @keyframes load{
   from{width:0;}
@@ -122,6 +122,7 @@ button{
   background:#ff00cc;
   color:white;
   cursor:pointer;
+  
 }
 
 button:hover{
