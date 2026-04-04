@@ -1,141 +1,169 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mes Compétences</title>
-    <link rel="stylesheet" href="css/profil.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Compétences</title>
+
+  <link rel="stylesheet" href="css/profil.css">
+  <link rel="stylesheet" href="css/transition.css">
 </head>
+
 <body>
 
-    <nav class="TopLeft_part">
-        <a href="index.html" class="nav-link">Accueil</a>
-        <a href="sommaire.html" class="nav-link">Parcours</a>
-        <a href="profil.html" class="nav-link">Compétence</a>
-        <a href="projet.html" class="nav-link">Réalisation</a>
-        <a href="veille_tech.html" class="nav-link">Veille Technologique</a>
-        <a href="contact.html" class="nav-link">Contact</a>
-    </nav>
+<!-- NAVBAR -->
+<nav class="navbar">
+  <a href="index.html" class="nav-link">Accueil</a>
+  <a href="sommaire.html" class="nav-link">Parcours</a>
+  <a href="profil.html" class="nav-link">Compétence</a>
+  <a href="projet.html" class="nav-link">Réalisation</a>
+  <a href="veille_tech.html" class="nav-link">Veille</a>
+  <a href="contact.html" class="nav-link">Contact</a>
+</nav>
 
+<!-- HERO -->
+<section class="hero-small">
+  <h1>Mes Compétences</h1>
+  <p>Technologies & outils maîtrisés</p>
+</section>
 
-    <section class="section-skills">
+<!-- SKILLS -->
+<section class="skills">
 
-        <h1>Mes Compétences</h1>
+  <!-- FRONT -->
+  <h2>Front-End</h2>
+  <div class="grid">
 
-        <!-- FRONTEND -->
-        <h2>Front-End</h2>
-        <div class="skills-container">
-            <div class="skill-card">
-                <h3>HTML</h3>
-                <div class="progress"><div class="progress-bar html"></div></div>
-                <p>Structure des pages web</p>
-            </div>
-            <div class="skill-card">
-                <h3>CSS</h3>
-                <div class="progress"><div class="progress-bar css"></div></div>
-                <p>Design et responsive</p>
-            </div>
-            <div class="skill-card">
-                <h3>JavaScript</h3>
-                <div class="progress"><div class="progress-bar js"></div></div>
-                <p>Interactions web</p>
-            </div>
-        </div>
+    <div class="card">
+      <h3>HTML</h3>
+      <div class="bar"><div class="fill html"></div></div>
+      <span>65%</span>
+    </div>
 
-        <!-- FRAMEWORK -->
-        <h2>Frameworks</h2>
-        <div class="skills-container">
-            <div class="skill-card">
-                <h3>Bootstrap</h3>
-                <div class="progress"><div class="progress-bar bootstrap"></div></div>
-            </div>
-            <div class="skill-card">
-                <h3>Flutter</h3>
-                <div class="progress"><div class="progress-bar flutter"></div></div>
-            </div>
-        </div>
+    <div class="card">
+      <h3>CSS</h3>
+      <div class="bar"><div class="fill css"></div></div>
+      <span>60%</span>
+    </div>
 
-        <!-- BACKEND -->
-        <h2>Back-End</h2>
-        <div class="skills-container">
-            <div class="skill-card">
-                <h3>PHP</h3>
-                <div class="progress"><div class="progress-bar php"></div></div>
-            </div>
-            <div class="skill-card">
-                <h3>Python</h3>
-                <div class="progress"><div class="progress-bar python"></div></div>
-            </div>
-        </div>
+    <div class="card">
+      <h3>JavaScript</h3>
+      <div class="bar"><div class="fill js"></div></div>
+      <span>15%</span>
+    </div>
 
-        <!-- BASE DE DONNEES -->
-        <h2>Base de données</h2>
-        <div class="skills-container">
-            <div class="skill-card">
-                <h3>SQL / PostgreSQL</h3>
-                <div class="progress"><div class="progress-bar sql"></div></div>
-            </div>
-            <div class="skill-card">
-                <h3>Firebase</h3>
-                <div class="progress"><div class="progress-bar firebase"></div></div>
-            </div>
-        </div>
+  </div>
 
-        <!-- OUTILS -->
-        <h2>Outils</h2>
-        <ul class="tools">
-            <li>Linux</li>
-            <li>Apache</li>
-            <li>Git</li>
-            <li>VS Code</li>
-            <li>Android Studio</li>
-        </ul>
+  <!-- FRAMEWORK -->
+  <h2>Frameworks</h2>
+  <div class="grid">
 
-        <button onclick="window.location.href='tbb_synthèse.html'">
-            Compétence Référentiel
-        </button>
+    <div class="card">
+      <h3>Bootstrap</h3>
+      <div class="bar"><div class="fill bootstrap"></div></div>
+    </div>
 
-    </section>
+    <div class="card">
+      <h3>Flutter</h3>
+      <div class="bar"><div class="fill flutter"></div></div>
+    </div>
 
-    <script>
-    
-        document.addEventListener('DOMContentLoaded', function () {
-        const links = document.querySelectorAll('a');
+  </div>
 
-        links.forEach(link => {
-            link.addEventListener('click', function (event) {
-            const href = this.getAttribute('href');
+  <!-- BACK -->
+  <h2>Back-End</h2>
+  <div class="grid">
 
-            if (!href || href.startsWith('#') || href.startsWith('http')) return;
+    <div class="card">
+      <h3>PHP</h3>
+      <div class="bar"><div class="fill php"></div></div>
+    </div>
 
-            event.preventDefault();
+    <div class="card">
+      <h3>Python</h3>
+      <div class="bar"><div class="fill python"></div></div>
+    </div>
 
-            document.body.classList.add('fade-out');
+  </div>
 
-            setTimeout(() => {
-                window.location.href = href;
-            }, 500);
-            });
-        });
-        });
+  <!-- DB -->
+  <h2>Base de données</h2>
+  <div class="grid">
 
-        // 🔥 FIX bouton retour navigateur
-        window.addEventListener("pageshow", function () {
-        document.body.classList.remove("fade-out");
-        });
-   
+    <div class="card">
+      <h3>SQL</h3>
+      <div class="bar"><div class="fill sql"></div></div>
+    </div>
 
-        const links = document.querySelectorAll('.nav-link');
-            const currentPage = window.location.pathname.split("/").pop();
+    <div class="card">
+      <h3>Firebase</h3>
+      <div class="bar"><div class="fill firebase"></div></div>
+    </div>
 
-            links.forEach(link => {
-            const linkHref = link.getAttribute("href");
+  </div>
 
-            if (linkHref === currentPage) {
-                link.classList.add("active");
-            }
-        });
-    </script>
+  <!-- OUTILS -->
+  <h2>Outils</h2>
+  <div class="tools">
+    <span>Linux</span>
+    <span>Apache</span>
+    <span>Git</span>
+    <span>VS Code</span>
+    <span>Android Studio</span>
+  </div>
+
+  <button onclick="window.location.href='tbb_synthèse.html'">
+    Référentiel
+  </button>
+
+</section>
+
+<footer>
+  <div class="footer-content">
+      
+    <div class="logo-orb">
+      <img src="images/my_logo.png" alt="logo" class="footer-logo">
+    </div>
+
+  </div>
+  <p>© 2025 ELY&BRI</p>
+</footer>
+
+<!-- JS -->
+<script>
+
+/* transition */
+document.querySelectorAll('a').forEach(link => {
+  link.addEventListener('click', function(e) {
+    const href = this.getAttribute('href');
+
+    if (!href || href.startsWith('http')) return;
+
+    e.preventDefault();
+    document.body.classList.add('fade-out');
+
+    setTimeout(() => {
+      window.location.href = href;
+    }, 400);
+  });
+});
+
+/* FIX retour */
+window.addEventListener("pageshow", () => {
+  document.body.classList.remove("fade-out");
+});
+
+/* menu actif */
+const links = document.querySelectorAll('.nav-link');
+const current = window.location.pathname.split("/").pop();
+
+links.forEach(link => {
+  if(link.getAttribute("href") === current){
+    link.classList.add("active");
+  }
+});
+
+</script>
 
 </body>
 </html>
