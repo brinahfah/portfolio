@@ -131,6 +131,18 @@ body{
   border-radius:10px;
 }
 
+.card a{
+  background-color: #ff00cc;
+  width:150px;
+  border-radius:5px;
+  color: #000;
+  text-decoration:none;
+  padding:5px;
+  position:relative;
+  top: 10px;
+
+}
+
 /* FOOTER */
 
 footer {
