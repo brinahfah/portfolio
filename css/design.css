@@ -183,3 +183,182 @@ footer {
     transform: rotate(360deg);
   }
 }
+
+
+/* =====================================
+   FOOTER ELY&BRI
+===================================== */
+
+.main-footer {
+    background: #0d0d0d;
+    color: white;
+    padding: 50px 40px 20px;
+    margin-top: 80px;
+}
+
+/* CONTENU PRINCIPAL */
+
+.footer-content {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 40px;
+    max-width: 1200px;
+    margin: auto;
+}
+
+/* LOGO ET IDENTITE */
+
+.footer-brand {
+    text-align: center;
+}
+
+.logo-orb {
+    width: 90px;
+    height: 90px;
+    margin: auto;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background: radial-gradient(circle, #240046, #000);
+
+    box-shadow: 0 0 20px rgba(255, 0, 204, 0.4);
+}
+
+.footer-logo {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    object-fit: cover;
+    animation: rotateLogo 6s linear infinite;
+
+    box-shadow: 0 0 20px rgba(0, 245, 255, 0.4);
+}
+
+.footer-brand h2 {
+    color: #ff00cc;
+    margin-top: 15px;
+    letter-spacing: 3px;
+}
+
+.brand-description {
+    color: #ccc;
+    font-size: 14px;
+}
+
+/* CONTACT */
+
+.footer-section {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.footer-section h3 {
+    color: #ff00cc;
+    letter-spacing: 2px;
+    margin-bottom: 5px;
+}
+
+.footer-section a {
+    color: #ccc;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.footer-section a:hover {
+    color: #ff00cc;
+    transform: translateX(5px);
+}
+
+/* SIGNATURE */
+
+.footer-signature {
+    text-align: center;
+}
+
+.signature-text {
+    color: #ccc;
+    font-style: italic;
+}
+
+.signature-name {
+    display: inline-block;
+    font-size: 25px;
+    font-weight: bold;
+    letter-spacing: 3px;
+
+    background: linear-gradient(90deg, #ff00cc, #3333ff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.signature-date {
+    color: #999;
+    font-size: 12px;
+    margin-top: 10px;
+}
+
+/* SEPARATEUR */
+
+.footer-line {
+    max-width: 1100px;
+    height: 1px;
+    margin: 40px auto 20px;
+
+    background: linear-gradient(
+        90deg,
+        transparent,
+        #ff00cc,
+        #3333ff,
+        transparent
+    );
+}
+
+/* COPYRIGHT */
+
+.footer-bottom {
+    text-align: center;
+    color: #888;
+    font-size: 13px;
+    line-height: 1.8;
+}
+
+.footer-bottom p {
+    margin: 5px;
+}
+
+/* ANIMATION DU LOGO */
+
+@keyframes rotateLogo {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+/* ADAPTATION MOBILE */
+
+@media screen and (max-width: 768px) {
+
+    .main-footer {
+        padding: 40px 20px 20px;
+    }
+
+    .footer-content {
+        flex-direction: column;
+        text-align: center;
+        gap: 35px;
+    }
+
+    .footer-section {
+        align-items: center;
+    }
+
+}
