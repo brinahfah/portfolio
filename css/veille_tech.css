@@ -1,82 +1,33 @@
-/* Veille Technologique & Auto-Formation */
 
-body{
-    background-color: #0f0f0f;
-    color:white;
+/* =========================================
+   RESET
+========================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-.veille-section {
-    padding: 80px 10%;
-    background: #0f0f0f;
+body {
+    font-family: "Segoe UI", sans-serif;
     color: white;
-    text-align: center;
+    min-height: 100vh;
+
+    display: flex;
+    flex-direction: column;
+
+    background:
+        radial-gradient(circle at top, #1a1a2e, #05050b);
+
+    overflow-x: hidden;
 }
 
-.veille-section h1 {
-    color: #b57aff;
-    font-size: 38px;
-    margin-bottom: 50px;
-}
+/* =========================================
+   NAVBAR
+   CONSERVÉE : reprendre ton ancien bloc
+========================================= */
 
-.veille-container {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 30px;
-}
-
-.veille-card {
-    background: #161616;
-    padding: 30px;
-    border-radius: 15px;
-    box-shadow: 0 0 15px rgba(181, 122, 255, 0.2);
-    transition: 0.3s;
-    text-align: left;
-}
-
-.veille-card:hover {
-    transform: translateY(-8px);
-    box-shadow: 0 0 25px rgba(181, 122, 255, 0.6);
-}
-
-.veille-card h2 {
-    color: #c084ff;
-    margin-bottom: 15px;
-}
-
-.veille-card p {
-    line-height: 1.6;
-    color: #ddd;
-}
-
-.veille-card ul {
-    padding-left: 20px;
-    margin-top: 10px;
-}
-
-.veille-card li {
-    margin-bottom: 8px;
-}
-
-.veille-card a {
-    color: #b57aff;
-    text-decoration: none;
-}
-
-.veille-card a:hover {
-    text-decoration: underline;
-}
-
-/* Responsive */
-@media(max-width:768px){
-    .veille-section {
-        padding: 50px 20px;
-    }
-    .veille-section h1 {
-        font-size: 30px;
-    }
-}
-
-/* NAVBAR */
 .navbar{
   position:fixed;
   top:0;
@@ -86,72 +37,343 @@ body{
   padding:15px;
   background:rgba(0,0,0,0.6);
   backdrop-filter:blur(10px);
+  z-index: 1000;
+  pointer-events: auto;
 }
 
 .navbar a{
   color:white;
   text-decoration:none;
-}
-
-.navbar a.active{
-  color:#ff00cc;
-}
-
-/* HERO */
-.hero-small{
-  text-align:center;
-  padding:120px 20px 60px;
-}
-
-.hero-small h1{
-  font-size:3rem;
-  background:linear-gradient(90deg,#ff00cc,#3333ff);
-  -webkit-background-clip:text;
-  -webkit-text-fill-color:transparent;
-}
-
-/* =========================
-   FOOTER LOGO ORB ANIME
-========================= */
-
-
-footer {
-  text-align: center;
-  padding: 20px;
-  background: #000;
-}
-
-/* Logo de la clé de sol */
-.footer-logo {
-  width: 70px;
-  height: 70px;
-  border-radius: 50%;
-  object-fit: cover;
   position: relative;
-
-  /* Rotation continue */
-  animation: rotateLogo 6s linear infinite;
-
-  /* Effet lumineux */
-  box-shadow: 0 0 20px rgba(0, 245, 255, 0.4);
+  z-index: 1001;
+  pointer-events: auto;
 }
 
-/* Image interne */
-.footer-logo img {
-  width: 100%;
-  height: 100%;
-  border-radius: 50%;
-  object-fit: cover;
+.navbar a.active {
+    color: #ff00cc;
 }
 
-/* Animation de rotation à 360° */
-@keyframes rotateLogo {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+/* =========================================
+   HERO - TITRE ARCHITECTURAL
+========================================= */
+
+.hero-small {
+    text-align: center;
+    padding: 125px 20px 55px;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Quadrillage technique derrière le titre */
+
+.hero-small::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+
+    background-image:
+        linear-gradient(rgba(123,44,255,.07) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(123,44,255,.07) 1px, transparent 1px);
+
+    background-size: 35px 35px;
+
+    mask-image: linear-gradient(
+        to bottom,
+        transparent,
+        black,
+        transparent
+    );
+
+    pointer-events: none;
+}
+
+.hero-small h1 {
+    position: relative;
+    font-size: clamp(2rem, 5vw, 3.2rem);
+
+    background: linear-gradient(
+        90deg,
+        #ff00cc,
+        #7b2cff,
+        #3333ff
+    );
+
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+
+    letter-spacing: 2px;
+}
+
+.hero-small::after {
+    content: "CONSTRUIRE • APPRENDRE • ÉVOLUER";
+
+    display: block;
+    margin-top: 18px;
+
+    color: #bca98a;
+
+    font-size: 11px;
+    letter-spacing: 5px;
+}
+
+/* =========================================
+   SECTION VEILLE
+========================================= */
+
+.veille-section {
+    width: 90%;
+    max-width: 1250px;
+
+    margin: 20px auto 80px;
+
+    padding: 35px;
+
+    position: relative;
+
+    background: rgba(12,15,29,.88);
+
+    border: 1px solid rgba(123,44,255,.25);
+
+    border-radius: 15px;
+
+    box-shadow:
+        0 15px 50px rgba(0,0,0,.6),
+        inset 0 0 35px rgba(123,44,255,.04);
+}
+
+/* Quadrillage de plans */
+
+.veille-section::before {
+    content: "";
+
+    position: absolute;
+    inset: 0;
+
+    background-image:
+        linear-gradient(rgba(51,51,255,.045) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(51,51,255,.045) 1px, transparent 1px);
+
+    background-size: 30px 30px;
+
+    border-radius: inherit;
+
+    pointer-events: none;
+}
+
+/* =========================================
+   CONTENEUR DES CARTES
+========================================= */
+
+.veille-container {
+    position: relative;
+    z-index: 1;
+
+    display: grid;
+
+    grid-template-columns: repeat(
+        auto-fit,
+        minmax(280px, 1fr)
+    );
+
+    gap: 28px;
+}
+
+
+.veille-intro {
+    position: relative;
+    z-index: 1;
+
+    max-width: 750px;
+    margin: 0 auto 35px;
+
+    text-align: center;
+
+    color: #bca98a;
+    font-size: 15px;
+    line-height: 1.8;
+    font-style: italic;
+}
+
+
+/* =========================================
+   CARTES ARCHITECTURALES
+========================================= */
+
+.veille-card {
+    position: relative;
+
+    padding: 30px;
+
+    background: linear-gradient(
+        145deg,
+        rgba(29,34,55,.96),
+        rgba(13,16,30,.98)
+    );
+
+    border: 1px solid rgba(188,169,138,.25);
+
+    border-radius: 8px;
+
+    box-shadow:
+        0 10px 25px rgba(0,0,0,.4);
+
+    transition: .4s ease;
+
+    text-align: left;
+
+    overflow: hidden;
+}
+
+/* Repère architectural en haut */
+
+.veille-card::before {
+    content: "";
+
+    position: absolute;
+
+    top: 0;
+    left: 0;
+
+    width: 65px;
+    height: 3px;
+
+    background: linear-gradient(
+        90deg,
+        #ff00cc,
+        #3333ff
+    );
+}
+
+/* Petit repère de construction */
+
+.veille-card::after {
+    content: "+";
+
+    position: absolute;
+
+    right: 15px;
+    top: 12px;
+
+    color: rgba(188,169,138,.5);
+
+    font-size: 20px;
+}
+
+.veille-card:hover {
+    transform: translateY(-7px);
+
+    border-color: rgba(123,44,255,.7);
+
+    box-shadow:
+        0 15px 35px rgba(123,44,255,.15),
+        0 0 15px rgba(255,0,204,.08);
+}
+
+/* =========================================
+   TITRES DES CARTES
+========================================= */
+
+.veille-card h2 {
+    color: #c9b4ff;
+
+    font-size: 23px;
+
+    margin-bottom: 18px;
+
+    padding-bottom: 13px;
+
+    border-bottom: 1px solid rgba(188,169,138,.2);
+}
+
+.veille-card p {
+    line-height: 1.8;
+
+    color: #d0d0dc;
+
+    font-size: 14px;
+}
+
+/* =========================================
+   LISTES
+========================================= */
+
+.veille-card ul {
+    padding-left: 20px;
+    margin-top: 15px;
+}
+
+.veille-card li {
+    margin-bottom: 12px;
+
+    color: #d2d3df;
+
+    line-height: 1.6;
+
+    font-size: 14px;
+}
+
+.veille-card li::marker {
+    color: #a78bfa;
+}
+
+/* =========================================
+   LIENS
+========================================= */
+
+.veille-card a {
+    color: #b99aff;
+
+    text-decoration: none;
+
+    transition: .3s;
+}
+
+.veille-card a:hover {
+    color: #ff00cc;
+    text-decoration: underline;
+}
+
+/* =========================================
+   RESPONSIVE
+========================================= */
+
+@media(max-width: 900px) {
+
+    .veille-section {
+        width: 94%;
+        padding: 25px;
+    }
+
+}
+
+@media(max-width: 768px) {
+
+    .hero-small {
+        padding: 120px 15px 40px;
+    }
+
+    .hero-small h1 {
+        font-size: 28px;
+    }
+
+    .hero-small::after {
+        font-size: 9px;
+        letter-spacing: 2px;
+    }
+
+    .veille-section {
+        padding: 20px;
+        margin-top: 15px;
+    }
+
+    .veille-container {
+        grid-template-columns: 1fr;
+    }
+
+    .veille-card {
+        padding: 23px;
+    }
+
 }
 
 
@@ -331,4 +553,312 @@ footer {
         align-items: center;
     }
 
+}
+
+/* =====================================
+   SCÈNE ARCHITECTURALE : FIGURINE ET ÉCHELLE
+===================================== */
+
+.construction-scene {
+    position: relative;
+    width: 100%;
+    max-width: 1000px;
+    height: 330px;
+    margin: 55px auto;
+    overflow: hidden;
+    border: 1px solid rgba(123, 44, 255, 0.25);
+    border-radius: 18px;
+    background:
+        linear-gradient(rgba(123, 44, 255, 0.045) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(123, 44, 255, 0.045) 1px, transparent 1px),
+        linear-gradient(135deg, #101426, #17152a);
+    background-size: 25px 25px, 25px 25px, cover;
+    box-shadow: 0 10px 35px rgba(0, 0, 0, 0.2);
+}
+
+/* Ciel et petites étoiles */
+
+.construction-star {
+    position: absolute;
+    color: #a78bfa;
+    opacity: 0.7;
+    animation: starGlow 2.5s infinite alternate;
+}
+
+.star-one {
+    top: 45px;
+    left: 12%;
+    font-size: 22px;
+}
+
+.star-two {
+    top: 100px;
+    left: 38%;
+    font-size: 16px;
+    animation-delay: 0.8s;
+}
+
+.star-three {
+    top: 35px;
+    right: 15%;
+    font-size: 18px;
+    animation-delay: 1.2s;
+}
+
+@keyframes starGlow {
+    from { opacity: 0.3; }
+    to { opacity: 1; }
+}
+
+/* Bâtiment */
+
+.construction-building {
+    position: absolute;
+    right: 10%;
+    bottom: 0;
+    width: 32%;
+    height: 245px;
+    background: linear-gradient(135deg, #34344d, #22263b);
+    border: 2px solid #77718f;
+    border-bottom: none;
+    box-shadow: -10px 0 30px rgba(0, 0, 0, 0.2);
+}
+
+.building-roof {
+    position: absolute;
+    top: -13px;
+    left: -8px;
+    width: calc(100% + 16px);
+    height: 13px;
+    background: #71658d;
+    border: 1px solid #a08cbf;
+}
+
+.building-windows {
+    display: grid;
+    grid-template-columns: repeat(2, 35px);
+    justify-content: space-evenly;
+    gap: 20px;
+    padding-top: 30px;
+}
+
+.building-windows span {
+    height: 35px;
+    background: rgba(123, 44, 255, 0.2);
+    border: 1px solid #9b8abb;
+    box-shadow: inset 0 0 12px rgba(123, 44, 255, 0.25);
+}
+
+.building-door {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 42px;
+    height: 65px;
+    transform: translateX(-50%);
+    background: #17182a;
+    border: 1px solid #82769d;
+    border-bottom: none;
+}
+
+/* Échelle */
+
+.construction-ladder {
+    position: absolute;
+    z-index: 3;
+    left: 48%;
+    bottom: 10px;
+    width: 155px;
+    height: 220px;
+    transform: rotate(-16deg);
+    transform-origin: bottom center;
+}
+
+.ladder-rail {
+    position: absolute;
+    top: 0;
+    width: 7px;
+    height: 100%;
+    border-radius: 5px;
+    background: linear-gradient(to right, #a99aaf, #685c7d);
+    border: 1px solid #c2b3ca;
+}
+
+.ladder-left {
+    left: 15px;
+}
+
+.ladder-right {
+    right: 15px;
+}
+
+.ladder-rungs {
+    position: absolute;
+    inset: 0 18px;
+    background: repeating-linear-gradient(
+        to bottom,
+        transparent 0,
+        transparent 18px,
+        #b4a3bc 18px,
+        #b4a3bc 22px
+    );
+}
+
+/* Figurine */
+
+.construction-person {
+    position: absolute;
+    z-index: 4;
+    left: 54%;
+    bottom: 78px;
+    width: 35px;
+    height: 85px;
+    animation: climbLadder 5s ease-in-out infinite alternate;
+}
+
+.person-head {
+    position: absolute;
+    top: 0;
+    left: 10px;
+    width: 17px;
+    height: 17px;
+    border-radius: 50%;
+    background: #d7b8a3;
+    border: 2px solid #f0d1b8;
+}
+
+.person-body {
+    position: absolute;
+    top: 18px;
+    left: 9px;
+    width: 19px;
+    height: 31px;
+    border-radius: 7px 7px 4px 4px;
+    background: #9872c9;
+    border: 1px solid #c2a4ed;
+}
+
+.person-arm,
+.person-leg {
+    position: absolute;
+    width: 6px;
+    border-radius: 5px;
+    background: #d7b8a3;
+    transform-origin: top center;
+}
+
+.person-arm {
+    top: 22px;
+    height: 25px;
+}
+
+.arm-left {
+    left: 9px;
+    transform: rotate(35deg);
+}
+
+.arm-right {
+    right: 7px;
+    transform: rotate(-40deg);
+}
+
+.person-leg {
+    top: 46px;
+    height: 27px;
+    background: #8e91a8;
+}
+
+.leg-left {
+    left: 11px;
+    transform: rotate(18deg);
+}
+
+.leg-right {
+    right: 10px;
+    transform: rotate(-25deg);
+}
+
+@keyframes climbLadder {
+    0% {
+        transform: translateY(35px) rotate(-3deg);
+    }
+
+    50% {
+        transform: translateY(-10px) rotate(2deg);
+    }
+
+    100% {
+        transform: translateY(-65px) rotate(-2deg);
+    }
+}
+
+/* Texte de la scène */
+
+.construction-caption {
+    position: absolute;
+    left: 7%;
+    bottom: 65px;
+    max-width: 260px;
+    z-index: 2;
+}
+
+.construction-caption span {
+    color: #b69aff;
+    font-size: 12px;
+    font-weight: bold;
+    letter-spacing: 3px;
+}
+
+.construction-caption p {
+    color: #d2d0df;
+    font-size: 15px;
+    line-height: 1.6;
+}
+
+/* Adaptation mobile */
+
+@media (max-width: 600px) {
+    .construction-scene {
+        height: 280px;
+        margin: 35px auto;
+    }
+
+    .construction-building {
+        right: 5%;
+        width: 38%;
+        height: 190px;
+    }
+
+    .construction-ladder {
+        left: 39%;
+        height: 180px;
+        width: 125px;
+    }
+
+    .construction-person {
+        left: 48%;
+        bottom: 65px;
+        transform: scale(0.85);
+        animation: climbLadderMobile 5s ease-in-out infinite alternate;
+    }
+
+    .construction-caption {
+        left: 5%;
+        bottom: 35px;
+        max-width: 125px;
+    }
+
+    .construction-caption span {
+        font-size: 9px;
+        letter-spacing: 1px;
+    }
+
+    .construction-caption p {
+        font-size: 11px;
+    }
+
+    @keyframes climbLadderMobile {
+        from { transform: translateY(25px) scale(0.85); }
+        to { transform: translateY(-45px) scale(0.85); }
+    }
 }

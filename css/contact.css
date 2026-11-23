@@ -1,46 +1,299 @@
-body{
+
+/* =========================================
+   PAGE CONTACT - STUDIO CREATIF ELY&BRI
+   NAVBAR ET FOOTER NON MODIFIES
+========================================= */
+
+body {
     font-family: Arial, Helvetica, sans-serif;
-    background:#0f0f1a;
-    margin:0;
-    padding:0;
-    color:white;
+    background: #0b0b18;
+    margin: 0;
+    padding: 0;
+    color: white;
 }
 
-.contact-container{
-    width:70%;
-    margin:auto;
-    padding:30px 0;
-    text-align:center;
-    position: relative;
-    bottom: 90px;
+/* HERO */
+
+.hero-small {
+    text-align: center;
+    padding: 130px 20px 55px;
 }
+
+.hero-small h1 {
+    font-size: 3rem;
+    background: linear-gradient(90deg, #ff00cc, #7b2cff, #3333ff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+/* FOND ET AMBIANCE */
+
+.contact-container {
+    width: 85%;
+    max-width: 1150px;
+    margin: 0 auto;
+    padding: 25px 0 90px;
+    position: relative;
+}
+
+.contact-container::before {
+    content: "";
+    position: absolute;
+    width: 350px;
+    height: 350px;
+    top: 10%;
+    left: 20%;
+    background: #7b2cff;
+    filter: blur(150px);
+    opacity: 0.12;
+    z-index: -1;
+}
+
+/* PRESENTATION */
+
+.contact-intro {
+    text-align: center;
+    max-width: 700px;
+    margin: 0 auto 55px;
+}
+
+.contact-intro .eyebrow {
+    color: #b69aff;
+    letter-spacing: 4px;
+    font-size: 12px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.contact-intro h2 {
+    font-size: clamp(30px, 5vw, 48px);
+    line-height: 1.2;
+    margin: 18px 0;
+    color: #f3edff;
+}
+
+.contact-intro h2 span {
+    background: linear-gradient(90deg, #ff00cc, #7b2cff, #00cfff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.contact-intro p {
+    color: #aaa9bd;
+    font-size: 16px;
+    line-height: 1.8;
+}
+
+/* RESEAU LUMINEUX */
+
+.contact-network {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 13px;
+    margin: 35px auto;
+}
+
+.network-dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: #b69aff;
+    box-shadow: 0 0 15px #7b2cff;
+    animation: networkPulse 2s infinite alternate;
+}
+
+.network-dot:nth-child(2) {
+    animation-delay: .5s;
+}
+
+.network-dot:nth-child(3) {
+    animation-delay: 1s;
+}
+
+.network-line {
+    width: 55px;
+    height: 1px;
+    background: linear-gradient(90deg, #7b2cff, #00cfff);
+}
+
+@keyframes networkPulse {
+    from {
+        opacity: .35;
+        transform: scale(.8);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1.4);
+    }
+}
+
+/* GRILLE DES CONTACTS */
+
+.contact-box {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 22px;
+    background: transparent;
+    padding: 0;
+    border-radius: 0;
+    margin-top: 0;
+    box-shadow: none;
+}
+
+/* CARTES */
+
+.contact-item {
+    position: relative;
+    min-height: 135px;
+    padding: 25px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 12px;
+
+    background: linear-gradient(
+        135deg,
+        rgba(31, 27, 54, .95),
+        rgba(17, 20, 40, .95)
+    );
+
+    border: 1px solid rgba(167, 139, 250, .2);
+    border-radius: 17px;
+    overflow: hidden;
+
+    transition: .35s ease;
+}
+
+.contact-item::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 4px;
+    height: 100%;
+    background: linear-gradient(#ff00cc, #3333ff);
+}
+
+.contact-item::after {
+    content: "";
+    position: absolute;
+    width: 110px;
+    height: 110px;
+    right: -50px;
+    bottom: -60px;
+    border-radius: 50%;
+    background: #7b2cff;
+    filter: blur(55px);
+    opacity: .18;
+    transition: .35s;
+}
+
+.contact-item:hover {
+    transform: translateY(-7px);
+    border-color: #9d71ff;
+    box-shadow: 0 12px 35px rgba(123, 44, 255, .18);
+}
+
+.contact-item:hover::after {
+    opacity: .5;
+}
+
+/* ICONES ET TITRES */
+
+.contact-icon {
+    font-size: 25px;
+    color: #c3a6ff;
+}
+
+.contact-label {
+    color: #aaa9bd;
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.contact-item a,
+.contact-value {
+    position: relative;
+    z-index: 2;
+    color: #f1eaff;
+    font-size: 16px;
+    text-decoration: none;
+    overflow-wrap: anywhere;
+    transition: .3s;
+}
+
+.contact-item a:hover {
+    color: #ff8bea;
+}
+
+/* SIGNATURE */
+
+.contact-signature {
+    text-align: center;
+    margin: 65px auto 0;
+    padding: 25px 15px;
+}
+
+.contact-signature p {
+    color: #aaa9bd;
+    font-size: 16px;
+    line-height: 1.8;
+}
+
+.contact-signature strong {
+    background: linear-gradient(90deg, #ff00cc, #7b2cff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    letter-spacing: 2px;
+}
+
+/* RESPONSIVE */
+
+@media screen and (max-width: 700px) {
+
+    .contact-container {
+        width: 90%;
+    }
+
+    .contact-box {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+
+    .contact-item {
+        min-height: 115px;
+        padding: 22px;
+    }
+
+    .contact-intro h2 {
+        font-size: 32px;
+    }
+
+    .contact-signature {
+        margin-top: 35px;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .network-dot {
+        animation: none;
+    }
+
+    .contact-item {
+        transition: none;
+    }
+}
+
 
 h1{
     color:#7c8cff;
 }
 
-.contact-box{
-    background:#17172a;
-    padding:50px;
-    border-radius:12px;
-    margin-top:40px;
-    box-shadow:0 0 15px rgba(0,0,0,0.5);
-}
 
-.contact-item{
-    margin:20px 0;
-    font-size:18px;
-}
-
-.contact-item a{
-    text-decoration:none;
-    color:#a78bfa;
-    transition:0.3s;
-}
-
-.contact-item a:hover{
-    color:#7c8cff;
-}
 
 /* NAVBAR */
 .navbar{
@@ -63,18 +316,6 @@ h1{
   color:#ff00cc;
 }
 
-/* HERO */
-.hero-small{
-  text-align:center;
-  padding:120px 20px 60px;
-}
-
-.hero-small h1{
-  font-size:3rem;
-  background:linear-gradient(90deg,#ff00cc,#3333ff);
-  -webkit-background-clip:text;
-  -webkit-text-fill-color:transparent;
-}
 
 /* =========================
    FOOTER LOGO ORB ANIME

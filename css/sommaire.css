@@ -1,9 +1,519 @@
-body{
-  margin:0;
-  font-family:Arial, sans-serif;
-  background:#0d0d0d;
-  color:white;
+
+/* =========================================
+   BASE
+========================================= */
+
+body {
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+    background:
+        radial-gradient(ellipse at 15% 20%, rgba(117, 45, 190, 0.13), transparent 40%),
+        radial-gradient(ellipse at 85% 60%, rgba(30, 100, 200, 0.10), transparent 40%),
+        #09090f;
+    color: #fff;
 }
+
+/* =========================================
+   HERO
+========================================= */
+
+.hero-small {
+    text-align: center;
+    padding: 145px 20px 85px;
+    position: relative;
+    overflow: hidden;
+}
+
+.hero-small::before {
+    content: "";
+    position: absolute;
+    width: 350px;
+    height: 350px;
+    background: rgba(160, 65, 255, 0.12);
+    filter: blur(100px);
+    border-radius: 50%;
+    top: -180px;
+    left: 50%;
+    transform: translateX(-50%);
+    pointer-events: none;
+}
+
+.hero-small h1 {
+    position: relative;
+    font-size: clamp(2.5rem, 6vw, 4.5rem);
+    font-weight: 800;
+    letter-spacing: -2px;
+    margin-bottom: 15px;
+
+    background: linear-gradient(
+        100deg,
+        #ff45d4,
+        #a66bff,
+        #56c9ff
+    );
+
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+
+    animation: title-appear 1s ease both;
+}
+
+.hero-small p {
+    color: #aaa5ba;
+    font-size: 1.05rem;
+    letter-spacing: 2px;
+    margin: auto;
+    max-width: 650px;
+    animation: title-appear 1.2s ease both;
+}
+
+@keyframes title-appear {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* =========================================
+   TIMELINE SECTION
+========================================= */
+
+.timeline-section {
+    padding: 55px 20px 150px;
+    position: relative;
+    overflow: visible;
+}
+
+.timeline {
+    position: relative;
+    max-width: 1050px;
+    margin: auto;
+}
+
+/* Ligne centrale lumineuse */
+
+.timeline::before {
+    content: "";
+    position: absolute;
+    left: 50%;
+    top: 0;
+    width: 2px;
+    height: 100%;
+    transform: translateX(-50%);
+
+    background: linear-gradient(
+        to bottom,
+        #ff40d0,
+        #a45bff,
+        #398fff,
+        rgba(57, 143, 255, 0.1)
+    );
+
+    box-shadow: 0 0 15px rgba(160, 80, 255, 0.5);
+}
+
+
+/* =========================================
+   TIMELINE ITEMS
+========================================= */
+
+.timeline-item {
+    width: 50%;
+    padding: 20px 0;
+    position: relative;
+    box-sizing: border-box;
+}
+
+/* Pancartes à gauche */
+.timeline-item:nth-child(odd) {
+    left: 0;
+    padding-right: 12px;
+    text-align: right;
+}
+
+/* Pancartes à droite */
+.timeline-item:nth-child(even) {
+    left: 50%;
+    padding-left: 12px;
+    text-align: left;
+}
+
+/* =========================================
+   POINTS DE FIXATION SUR LA BARRE
+========================================= */
+
+.timeline-item::after {
+    content: "";
+    position: absolute;
+    top: 42px;
+    right: -8px;
+
+    width: 13px;
+    height: 13px;
+    border-radius: 50%;
+
+    background: #ff52d3;
+    border: 3px solid #fff;
+
+    box-shadow:
+        0 0 10px #ff52d3,
+        0 0 22px #a45bff;
+
+    z-index: 2;
+}
+
+/* Points du côté droit */
+.timeline-item:nth-child(even)::after {
+    left: -8px;
+    right: auto;
+}
+
+
+/* =========================================
+   TIMELINE CARDS
+========================================= */
+
+.timeline-content {
+    position: relative;
+    padding: 30px;
+    border-radius: 22px;
+
+    background: linear-gradient(
+        145deg,
+        rgba(255,255,255,0.075),
+        rgba(120,80,180,0.035)
+    );
+
+    border: 1px solid rgba(180,140,255,0.18);
+
+    backdrop-filter: blur(18px);
+    -webkit-backdrop-filter: blur(18px);
+
+    box-shadow:
+        0 10px 35px rgba(0,0,0,0.25),
+        inset 0 1px 0 rgba(255,255,255,0.06);
+
+    transition: all 0.4s ease;
+}
+
+.timeline-content:hover {
+    transform: translateY(-9px);
+
+    border-color: rgba(202,120,255,0.7);
+
+    box-shadow:
+        0 15px 45px rgba(130,60,255,0.16),
+        0 0 20px rgba(190,70,255,0.08);
+}
+
+.timeline-content h3 {
+    font-size: 1.35rem;
+    margin: 0 0 18px;
+
+    background: linear-gradient(
+        90deg,
+        #ff62d8,
+        #a77aff
+    );
+
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.timeline-content p {
+    color: #d0ccdc;
+    line-height: 1.85;
+    font-size: 0.94rem;
+    margin: 0;
+}
+
+.timeline-content li {
+    color: #d0ccdc;
+    line-height: 1.8;
+    margin-bottom: 12px;
+}
+
+.timeline-content ul {
+    padding-left: 20px;
+}
+
+
+/* =========================================
+   IMAGE SECTION
+========================================= */
+
+.image-section {
+    text-align: center;
+    margin: 45px 20px 80px;
+}
+
+.image-section img {
+    width: 260px;
+    max-width: 100%;
+    border-radius: 24px;
+
+    box-shadow:
+        0 15px 45px rgba(125,65,255,0.22),
+        0 0 25px rgba(255,50,210,0.08);
+
+    transition: transform 0.4s ease;
+}
+
+.image-section img:hover {
+    transform: scale(1.05) rotate(1deg);
+}
+
+.image-section button {
+    display: block;
+    margin: 28px auto 0;
+    padding: 13px 35px;
+
+    border: 1px solid rgba(255,255,255,0.2);
+    border-radius: 40px;
+
+    background: linear-gradient(
+        100deg,
+        #d92ebc,
+        #754bfa
+    );
+
+    color: white;
+    font-size: 0.95rem;
+    font-weight: bold;
+    cursor: pointer;
+
+    box-shadow: 0 5px 22px rgba(150,60,255,0.2);
+
+    transition: all 0.3s ease;
+}
+
+.image-section button:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 10px 30px rgba(190,50,255,0.35);
+}
+
+/* =========================================
+   PETIT PERSONNAGE MARCHANT
+========================================= */
+
+.timeline-walker {
+    position: absolute;
+    bottom: -90px;
+    left: 50%;
+    width: 28px;
+    height: 68px;
+    z-index: 5;
+
+    animation: walker-travel 7s ease-in-out infinite alternate;
+}
+
+/* Tête */
+
+.walker-head {
+    position: absolute;
+    top: 0;
+    left: 8px;
+
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+
+    background: #d5a4ff;
+    box-shadow: 0 0 12px #a45bff;
+}
+
+/* Corps */
+
+.walker-body {
+    position: absolute;
+    top: 14px;
+    left: 12px;
+
+    width: 5px;
+    height: 23px;
+    border-radius: 5px;
+
+    background: #d5a4ff;
+}
+
+/* Bras et jambes */
+
+.walker-arm,
+.walker-leg {
+    position: absolute;
+    width: 4px;
+    border-radius: 5px;
+
+    background: #d5a4ff;
+    transform-origin: top center;
+}
+
+.walker-arm {
+    top: 16px;
+    height: 17px;
+}
+
+.walker-arm.left {
+    left: 9px;
+    animation: arm-left 0.7s ease-in-out infinite;
+}
+
+.walker-arm.right {
+    left: 15px;
+    animation: arm-right 0.7s ease-in-out infinite;
+}
+
+.walker-leg {
+    top: 35px;
+    height: 23px;
+}
+
+.walker-leg.left {
+    left: 11px;
+    animation: leg-left 0.7s ease-in-out infinite;
+}
+
+.walker-leg.right {
+    left: 15px;
+    animation: leg-right 0.7s ease-in-out infinite;
+}
+
+/* Ombre au sol */
+
+.timeline-walker::after {
+    content: "";
+    position: absolute;
+    bottom: 5px;
+    left: 3px;
+
+    width: 23px;
+    height: 5px;
+    border-radius: 50%;
+
+    background: rgba(170,100,255,0.35);
+    filter: blur(4px);
+}
+
+/* Déplacement horizontal */
+
+@keyframes walker-travel {
+    from {
+        transform: translateX(-130px);
+    }
+    to {
+        transform: translateX(100px);
+    }
+}
+
+/* Animation des bras */
+
+@keyframes arm-left {
+    0%, 100% { transform: rotate(25deg); }
+    50% { transform: rotate(-25deg); }
+}
+
+@keyframes arm-right {
+    0%, 100% { transform: rotate(-25deg); }
+    50% { transform: rotate(25deg); }
+}
+
+/* Animation des jambes */
+
+@keyframes leg-left {
+    0%, 100% { transform: rotate(-25deg); }
+    50% { transform: rotate(25deg); }
+}
+
+@keyframes leg-right {
+    0%, 100% { transform: rotate(25deg); }
+    50% { transform: rotate(-25deg); }
+}
+
+/* =========================================
+   RESPONSIVE MOBILE
+========================================= */
+
+@media screen and (max-width: 700px) {
+
+    .hero-small {
+        padding: 110px 20px 55px;
+    }
+
+    .hero-small h1 {
+        letter-spacing: -1px;
+    }
+
+    .timeline-section {
+        padding: 35px 15px 120px;
+    }
+
+    .timeline::before {
+        left: 15px;
+    }
+
+    .timeline-item,
+    .timeline-item:nth-child(odd),
+    .timeline-item:nth-child(even) {
+        width: 100%;
+        left: 0;
+        padding: 18px 10px 18px 45px;
+        text-align: left;
+    }
+
+    .timeline-item::after,
+    .timeline-item:nth-child(even)::after {
+        left: 8px;
+        right: auto;
+    }
+
+    .timeline-content {
+        padding: 22px;
+    }
+
+    .timeline-content h3 {
+        font-size: 1.2rem;
+    }
+
+    .timeline-walker {
+        left: 15px;
+        animation: walker-travel-mobile 5s ease-in-out infinite alternate;
+    }
+
+    @keyframes walker-travel-mobile {
+        from {
+            transform: translateX(-5px);
+        }
+        to {
+            transform: translateX(45px);
+        }
+    }
+}
+
+/* =========================================
+   ACCESSIBILITE - MOUVEMENTS REDUITS
+========================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+    .hero-small h1,
+    .hero-small p,
+    .timeline-walker,
+    .walker-arm,
+    .walker-leg {
+        animation: none;
+    }
+
+    .timeline-content,
+    .image-section img,
+    .image-section button {
+        transition: none;
+    }
+}
+
 
 /* NAVBAR */
 .navbar{
@@ -15,119 +525,23 @@ body{
   padding:15px;
   background:rgba(0,0,0,0.6);
   backdrop-filter:blur(10px);
+  z-index: 1000;
+  pointer-events: auto;
 }
 
 .navbar a{
   color:white;
   text-decoration:none;
+  position: relative;
+  z-index: 1001;
+  pointer-events: auto;
 }
 
 .navbar a.active{
   color:#ff00cc;
 }
 
-/* HERO */
-.hero-small{
-  text-align:center;
-  padding:120px 20px 60px;
-}
 
-.hero-small h1{
-  font-size:3rem;
-  background:linear-gradient(90deg,#ff00cc,#3333ff);
-  -webkit-background-clip:text;
-  -webkit-text-fill-color:transparent;
-}
-
-/* TIMELINE */
-.timeline-section{
-  padding:50px 20px;
-}
-
-.timeline{
-  position:relative;
-  max-width:800px;
-  margin:auto;
-}
-
-.timeline::before{
-  content:"";
-  position:absolute;
-  left:50%;
-  width:3px;
-  height:100%;
-  background:#ff00cc;
-}
-
-/* items */
-.timeline-item{
-  width:50%;
-  padding:20px;
-  position:relative;
-}
-
-.timeline-item:nth-child(odd){
-  left:0;
-  text-align:right;
-}
-
-.timeline-item:nth-child(even){
-  left:50%;
-}
-
-/* content */
-.timeline-content{
-  background:rgba(255,255,255,0.05);
-  padding:20px;
-  border-radius:10px;
-  backdrop-filter:blur(10px);
-  transition:0.3s;
-}
-
-.timeline-content:hover{
-  transform:scale(1.05);
-}
-
-/* points */
-.timeline-item::after{
-  content:"";
-  position:absolute;
-  width:15px;
-  height:15px;
-  background:#ff00cc;
-  border-radius:50%;
-  top:30px;
-  right:-8px;
-}
-
-.timeline-item:nth-child(even)::after{
-  left:-8px;
-}
-
-/* IMAGE */
-.image-section{
-  text-align:center;
-  margin:50px;
-}
-
-.image-section img{
-  width:250px;
-  border-radius:10px;
-}
-
-.image-section button{
-  margin-top:20px;
-  padding:10px 20px;
-  border:none;
-  background:#ff00cc;
-  color:white;
-  border-radius:20px;
-  cursor:pointer;
-}
-
-.image-section button:hover{
-  transform:scale(1.05);
-}
 
 /* =========================
    FOOTER LOGO ORB ANIME
