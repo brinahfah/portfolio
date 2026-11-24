@@ -1,8 +1,602 @@
-body{
-  margin:0;
-  font-family:Arial;
-  background:#0d0d0d;
-  color:white;
+
+
+
+/* =========================================
+   ELY&BRI - SALLE D'ENTRAINEMENT NUMERIQUE
+   NAVBAR ET FOOTER CONSERVES
+========================================= */
+
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background: #0d0d18;
+    color: white;
+}
+
+/* HERO */
+
+.hero-small {
+    text-align: center;
+    padding: 120px 20px 40px;
+}
+
+.hero-small h1 {
+    font-size: 3rem;
+    background: linear-gradient(90deg, #ff00cc, #3333ff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.hero-small p {
+    color: #aaa4bd;
+}
+
+/* INTRODUCTION DE LA SALLE */
+
+.skills {
+    position: relative;
+    max-width: 1150px;
+    margin: auto;
+    padding: 35px 40px 80px;
+}
+
+.gym-intro {
+    text-align: center;
+    max-width: 750px;
+    margin: 0 auto 35px;
+}
+
+.gym-label {
+    display: inline-block;
+    color: #b69aff;
+    font-size: 11px;
+    letter-spacing: 4px;
+    font-weight: bold;
+}
+
+.gym-intro h2 {
+    color: #f0eaff;
+    font-size: clamp(25px, 4vw, 38px);
+    line-height: 1.3;
+    margin: 18px 0;
+}
+
+.gym-intro p {
+    color: #aaa9bd;
+    line-height: 1.8;
+}
+
+/* =========================================
+   SALLE DE SPORT
+========================================= */
+
+.gym-scene {
+    position: relative;
+    height: 330px;
+    max-width: 950px;
+    margin: 40px auto 55px;
+    overflow: hidden;
+    border: 1px solid rgba(123, 44, 255, .3);
+    border-radius: 20px;
+
+    background:
+        radial-gradient(circle at 50% 30%,
+            rgba(123, 44, 255, .18),
+            transparent 45%),
+        linear-gradient(135deg, #171729, #0d1020);
+
+    box-shadow: 0 15px 40px rgba(0, 0, 0, .3);
+}
+
+/* MUR QUADRILLE */
+
+.gym-wall-grid {
+    position: absolute;
+    inset: 0;
+    opacity: .5;
+
+    background-image:
+        linear-gradient(rgba(123, 44, 255, .08) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(123, 44, 255, .08) 1px, transparent 1px);
+
+    background-size: 30px 30px;
+}
+
+/* ENSEIGNE */
+
+.gym-sign {
+    position: absolute;
+    top: 25px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 8px;
+    font-size: 13px;
+    font-weight: bold;
+    letter-spacing: 3px;
+    color: #e8dcff;
+    text-shadow: 0 0 12px #7b2cff;
+    white-space: nowrap;
+}
+
+.sign-highlight {
+    color: #ff65df;
+}
+
+/* SOL */
+
+.gym-floor {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 22px;
+    background: linear-gradient(90deg, #302843, #514065, #302843);
+    border-top: 2px solid #8067a8;
+    box-shadow: 0 -5px 20px rgba(123, 44, 255, .2);
+}
+
+/* PERSONNAGES */
+
+.gym-character {
+    position: absolute;
+    z-index: 3;
+    bottom: 22px;
+    width: 42%;
+    height: 220px;
+}
+
+.pushup-character {
+    left: 5%;
+}
+
+.dumbbell-character {
+    right: 5%;
+}
+
+.character-caption {
+    position: absolute;
+    bottom: 12px;
+    left: 50%;
+    transform: translateX(-50%);
+    color: #bca6e9;
+    font-size: 10px;
+    letter-spacing: 3px;
+    font-weight: bold;
+    white-space: nowrap;
+}
+
+/* =========================================
+   FIGURINE 1 : POMPES
+========================================= */
+
+.pushup-person {
+    position: absolute;
+    left: 50%;
+    bottom: 43px;
+    width: 170px;
+    height: 90px;
+    transform: translateX(-50%);
+    animation: pushupMovement 1.5s ease-in-out infinite;
+}
+
+.pushup-head {
+    position: absolute;
+    top: 22px;
+    left: 5px;
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    background: #d6b8a6;
+    border: 2px solid #f0d1b8;
+}
+
+.pushup-torso {
+    position: absolute;
+    top: 34px;
+    left: 32px;
+    width: 83px;
+    height: 26px;
+    border-radius: 15px;
+    background: linear-gradient(90deg, #7b2cff, #b47aff);
+    transform: rotate(-7deg);
+}
+
+.pushup-arm {
+    position: absolute;
+    top: 48px;
+    width: 8px;
+    height: 38px;
+    border-radius: 10px;
+    background: #d6b8a6;
+    transform-origin: top center;
+}
+
+.pushup-arm-left {
+    left: 42px;
+    transform: rotate(-15deg);
+}
+
+.pushup-arm-right {
+    left: 102px;
+    transform: rotate(15deg);
+}
+
+.pushup-leg {
+    position: absolute;
+    top: 48px;
+    width: 9px;
+    height: 42px;
+    border-radius: 10px;
+    background: #8f91a8;
+    transform-origin: top center;
+}
+
+.pushup-leg-left {
+    left: 108px;
+    transform: rotate(-45deg);
+}
+
+.pushup-leg-right {
+    left: 120px;
+    transform: rotate(-55deg);
+}
+
+@keyframes pushupMovement {
+    0%, 100% {
+        transform: translate(-50%, 0) rotate(0deg);
+    }
+
+    50% {
+        transform: translate(-50%, 14px) rotate(1deg);
+    }
+}
+
+/* =========================================
+   FIGURINE 2 : HALTERES
+========================================= */
+
+.dumbbell-person {
+    position: absolute;
+    left: 50%;
+    bottom: 42px;
+    width: 130px;
+    height: 165px;
+    transform: translateX(-50%);
+}
+
+.dumbbell-head {
+    position: absolute;
+    top: 5px;
+    left: 55px;
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    background: #d6b8a6;
+    border: 2px solid #f0d1b8;
+}
+
+.dumbbell-torso {
+    position: absolute;
+    top: 32px;
+    left: 48px;
+    width: 38px;
+    height: 58px;
+    border-radius: 12px 12px 8px 8px;
+    background: linear-gradient(135deg, #3333ff, #7b2cff);
+    border: 1px solid #a68bff;
+}
+
+/* BRAS ANIMES */
+
+.dumbbell-arm {
+    position: absolute;
+    top: 35px;
+    width: 9px;
+    height: 55px;
+    border-radius: 10px;
+    background: #d6b8a6;
+    transform-origin: top center;
+    animation: liftWeights 1.8s ease-in-out infinite alternate;
+}
+
+.dumbbell-arm-left {
+    left: 47px;
+    transform: rotate(38deg);
+}
+
+.dumbbell-arm-right {
+    right: 37px;
+    transform: rotate(-38deg);
+}
+
+@keyframes liftWeights {
+    from {
+        transform: rotate(25deg);
+    }
+
+    to {
+        transform: rotate(-20deg);
+    }
+}
+
+/* HALTERES */
+
+.weight {
+    position: absolute;
+    top: -17px;
+    left: -13px;
+    width: 35px;
+    height: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2px;
+}
+
+.weight span {
+    width: 7px;
+    height: 19px;
+    border-radius: 3px;
+    background: #aaa2bd;
+    border: 1px solid #e0d4f0;
+}
+
+.weight i {
+    width: 12px;
+    height: 4px;
+    background: #c4b5d9;
+}
+
+/* JAMBES */
+
+.dumbbell-leg {
+    position: absolute;
+    top: 82px;
+    width: 11px;
+    height: 48px;
+    border-radius: 10px;
+    background: #9293aa;
+    transform-origin: top center;
+}
+
+.dumbbell-leg-left {
+    left: 53px;
+    transform: rotate(8deg);
+}
+
+.dumbbell-leg-right {
+    left: 72px;
+    transform: rotate(-8deg);
+}
+
+/* =========================================
+   MESSAGE MOTIVATION
+========================================= */
+
+.training-message {
+    text-align: center;
+    margin: 30px auto 60px;
+    padding: 20px;
+    border-top: 1px solid rgba(123, 44, 255, .25);
+    border-bottom: 1px solid rgba(123, 44, 255, .25);
+}
+
+.training-message span {
+    color: #b69aff;
+    font-size: 11px;
+    letter-spacing: 3px;
+}
+
+.training-message p {
+    color: #d4cde4;
+    font-size: 16px;
+    font-style: italic;
+}
+
+/* =========================================
+   CATEGORIES ET COMPETENCES
+========================================= */
+
+.skills .skill-category {
+    margin-top: 55px;
+    margin-bottom: 22px;
+    color: #ff72df;
+    font-size: 24px;
+    letter-spacing: 1px;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 20px;
+}
+
+/* CARTES */
+
+.card {
+    position: relative;
+    padding: 23px;
+    border-radius: 15px;
+    overflow: hidden;
+
+    background: linear-gradient(
+        135deg,
+        rgba(39, 34, 62, .9),
+        rgba(20, 22, 42, .95)
+    );
+
+    border: 1px solid rgba(167, 139, 250, .18);
+    transition: .3s;
+}
+
+.card::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 3px;
+    height: 100%;
+    background: linear-gradient(#ff00cc, #3333ff);
+}
+
+.card:hover {
+    transform: translateY(-7px);
+    border-color: #9d71ff;
+    box-shadow: 0 10px 25px rgba(123, 44, 255, .15);
+}
+
+.card h3 {
+    color: #e9ddff;
+    margin-top: 0;
+}
+
+.card span {
+    color: #c6b2f3;
+    font-size: 13px;
+}
+
+/* BARRES DE PROGRESSION */
+
+.bar {
+    background: #29273b;
+    height: 9px;
+    border-radius: 20px;
+    overflow: hidden;
+    margin: 12px 0;
+}
+
+.fill {
+    height: 100%;
+    border-radius: 20px;
+    background: linear-gradient(90deg, #ff00cc, #7b2cff, #3333ff);
+    width: 0;
+    animation: load 2s ease forwards;
+}
+
+.html { width: 65%; }
+.css { width: 60%; }
+.js { width: 15%; }
+.bootstrap { width: 10%; }
+.flutter { width: 20%; }
+.php { width: 45%; }
+.python { width: 20%; }
+.sql { width: 40%; }
+.firebase { width: 25%; }
+
+@keyframes load {
+    from { width: 0; }
+}
+
+/* OUTILS */
+
+.tools {
+    margin-top: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+.tools span {
+    display: inline-block;
+    background: #211d35;
+    border: 1px solid rgba(167, 139, 250, .25);
+    color: #d9c8ff;
+    padding: 11px 17px;
+    border-radius: 25px;
+    transition: .3s;
+}
+
+.tools span:hover {
+    background: #39235c;
+    border-color: #a78bfa;
+    transform: translateY(-3px);
+}
+
+/* REFERENTIEL */
+
+.referentiel-area {
+    text-align: center;
+    margin-top: 55px;
+}
+
+.referentiel-area p {
+    color: #aaa9bd;
+    margin-bottom: 20px;
+}
+
+.referentiel-area button {
+    padding: 14px 28px;
+    border: 1px solid #9d71ff;
+    border-radius: 30px;
+    background: linear-gradient(90deg, #7b2cff, #3333ff);
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    transition: .3s;
+}
+
+.referentiel-area button:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 25px rgba(123, 44, 255, .35);
+}
+
+/* =========================================
+   RESPONSIVE
+========================================= */
+
+@media screen and (max-width: 700px) {
+
+    .skills {
+        padding: 25px 18px 60px;
+    }
+
+    .gym-scene {
+        height: 290px;
+    }
+
+    .gym-character {
+        width: 48%;
+    }
+
+    .pushup-character {
+        left: 0;
+    }
+
+    .dumbbell-character {
+        right: 0;
+    }
+
+    .pushup-person {
+        transform: translateX(-50%) scale(.8);
+        transform-origin: bottom center;
+    }
+
+    .dumbbell-person {
+        transform: translateX(-50%) scale(.85);
+        transform-origin: bottom center;
+    }
+
+    .gym-sign {
+        font-size: 10px;
+        letter-spacing: 2px;
+    }
+
+    .character-caption {
+        font-size: 8px;
+        letter-spacing: 1px;
+    }
+
+    .skills .skill-category {
+        font-size: 21px;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .pushup-person,
+    .dumbbell-arm,
+    .fill {
+        animation: none;
+    }
 }
 
 /* NAVBAR */
@@ -26,108 +620,6 @@ body{
   color:#ff00cc;
 }
 
-/* HERO */
-.hero-small{
-  text-align:center;
-  padding:120px 20px 40px;
-}
-
-.hero-small h1{
-  font-size:3rem;
-  background:linear-gradient(90deg,#ff00cc,#3333ff);
-  -webkit-background-clip:text;
-  -webkit-text-fill-color:transparent;
-}
-
-/* SKILLS */
-.skills{
-  padding:40px;
-}
-
-h2{
-  margin-top:50px;
-  color:#ff00cc;
-}
-
-/* GRID */
-.grid{
-  display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-  gap:20px;
-}
-
-/* CARD */
-.card{
-  background:rgba(255,255,255,0.05);
-  padding:20px;
-  border-radius:15px;
-  backdrop-filter:blur(10px);
-  transition:0.3s;
-}
-
-.card:hover{
-  transform:translateY(-8px);
-}
-
-/* BAR */
-.bar{
-  background:#222;
-  height:10px;
-  border-radius:20px;
-  overflow:hidden;
-  margin:10px 0;
-}
-
-.fill{
-  height:100%;
-  background:linear-gradient(90deg,#ff00cc,#3333ff);
-  width:0;
-  animation:load 2s forwards;
-}
-
-/* valeurs */
-.html{width:65%;}
-.css{width:60%;}
-.js{width:15%;}
-.bootstrap{width:10%;}
-.flutter{width:20%;}
-.php{width:45%;}
-.python{width:20%;}
-.sql{width:40%;}
-.firebase{width:25%;}
-
-@keyframes load{
-  from{width:0;}
-}
-
-/* TOOLS */
-.tools{
-  margin-top:20px;
-}
-
-.tools span{
-  display:inline-block;
-  background:#1a1a1a;
-  padding:10px 15px;
-  margin:5px;
-  border-radius:20px;
-}
-
-/* BUTTON */
-button{
-  margin-top:40px;
-  padding:12px 25px;
-  border:none;
-  border-radius:30px;
-  background:#ff00cc;
-  color:white;
-  cursor:pointer;
-  
-}
-
-button:hover{
-  transform:scale(1.05);
-}
 
 /* =========================
    FOOTER LOGO ORB ANIME
